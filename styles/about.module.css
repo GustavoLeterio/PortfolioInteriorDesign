@@ -1,0 +1,53 @@
+.aboutPage {
+    z-index: 2;
+    padding-top: calc(1.5vh + 50px);
+    min-height: calc(100vh - (1.5vh + 50px));
+    margin: 2vh 0 2vh 7vw;
+    display: flex;
+}
+
+.wrapperText {
+    width: 100%;
+    font-weight: 600;
+    color: black;
+}
+
+.title {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: bold;
+    line-height: 113%;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.text {
+    color: #3A3A3A;
+    margin: 0 2vw 0 0;
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    font-weight: normal;
+    font-family: 'Arapey', serif;
+}
+
+.imageWrapper {
+    width: 60%;
+}
+
+@media (max-width:1280px) {
+    .aboutPage {
+        width: 100vw;
+    }
+    .imageWrapper {
+        width: 90%;
+    }
+}
+
+@media (max-width:768px) {
+    .aboutPage {
+        flex-direction: column;
+    }
+    .imageWrapper {
+        width: 80%;
+    }
+    .text {
+        margin: 0 14vw 2vh 0;
+    }
+}

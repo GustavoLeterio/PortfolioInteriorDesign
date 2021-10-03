@@ -1,0 +1,103 @@
+.galeryPage {
+    padding-top: calc(1.5vh + 50px);
+    min-height: calc(100vh - (1.5vh + 50px));
+    display: flex;
+}
+
+.contentWrapper {
+    margin: 2vh 0 2vh 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.title {
+    margin: 0 0 0 7vw;
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: bold;
+    line-height: 113%;
+}
+
+.subTitle {
+    margin: 0 0 0 9vw;
+    font-size: clamp(1rem, 8vw, 2rem);
+    font-weight: 300;
+    text-shadow: 0 0 0.5px black;
+    color: #777777;
+}
+
+.line {
+    width: 200vw;
+    padding: 2vh 2vw 2vh 0;
+    display: flex;
+}
+
+.imageBox {
+    width: 24vw;
+    height: 12vw;
+    margin: 0 2vw 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.imageBox:hover {
+    width: 30vw;
+    height: 15vw;
+}
+
+.imageBox:hover {
+    width: 30vw;
+    height: 15vw;
+}
+
+.imageBox:hover .linkContent {
+    font-size: 1px;
+    opacity: 1;
+}
+
+.imageBox:first-child {
+    margin: 0 2vw 0 6.5vw;
+}
+
+.linkContent {
+    transform: translateY(-75px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 2.5%;
+    opacity: 0;
+    transition: width height 0.5s;
+    transition: opacity 0.2s;
+    white-space: nowrap
+}
+
+.link {
+    font-size: clamp(1rem, 1.5vw, 1.7rem);
+    color: white;
+    font-weight: bold;
+    background-color: #3C3C3C;
+    padding: 3% 5%;
+    border-radius: 6px;
+    transition: 0.1s;
+}
+
+.link:hover {
+    color: black;
+    background-color: #F6F6F6;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25) inset;
+}
+
+.name {
+    z-index: 2;
+    font-size: clamp(1rem, 2.2vw, 2.5rem);
+    font-weight: bold;
+    color: white;
+}
+
+@media (max-width:1280px) {
+    .linkContent {
+        transform: translateY(-55px);
+    }
+}
+
+@media (max-width:768px) {}
