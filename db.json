@@ -1,14 +1,23 @@
-{
-    "posts": [
-      { "id": 1, "title": "Post 1" },
-      { "id": 2, "title": "Post 2" },
-      { "id": 3, "title": "Post 3" }
-    ],
-    "comments": [
-      { "id": 1, "body": "some comment", "postId": 1 },
-      { "id": 2, "body": "some comment", "postId": 1 }
-    ],
-    "profile": {
-      "name": "typicode"
+[
+    {
+        "id": 1,
+        "category": "Escritório",
+        "title": "Escritório Bonito",
+        "image": "../public/01.png",
+        "router": "#"
+    },
+    {
+        "id": 2,
+        "category": "Escritório",
+        "title": "Escritório Legal",
+        "image": "../public/01.png",
+        "router": "#"
+    },
+    {
+        "id": 3,
+        "category": "Escritório",
+        "title": "Diversão Garantida",
+        "image": "../public/01.png",
+        "router": "#"
     }
-  }
+]
