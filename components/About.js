@@ -7,7 +7,7 @@ const AboutPage = () => {
         <div className={styles.aboutPage}>
             <div className={styles.wrapperText}>
                 <h1 className={styles.title}>
-                    Sobre Mim
+                    Sobre
                 </h1>
                 <p className={styles.text}>
                     Sint ex sint commodo consectetur irure voluptate anim ut dolor non nostrud duis sunt enim. Cupidatat cupidatat

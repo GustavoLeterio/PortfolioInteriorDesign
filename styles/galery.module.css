@@ -1,10 +1,6 @@
 .galeryPage {
     padding-top: calc(1.5vh + 50px);
     min-height: calc(100vh - (1.5vh + 50px));
-    display: flex;
-}
-
-.contentWrapper {
     margin: 2vh 0 2vh 0;
     font-family: 'Josefin Sans', sans-serif;
 }
@@ -16,24 +12,58 @@
     line-height: 113%;
 }
 
+.lineWrapper {
+    display: flex;
+}
+
+.categoryWrapper {
+    margin: 3vh 0 0 5vw;
+}
+
+.line {
+    width: 80vw;
+    padding: 2vh 0;
+    display: flex;
+}
+
+.leftArrow, .rightArrow {
+    margin: 0;
+    width: 6vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vw;
+    font-size: clamp(1rem, 4vw, 4rem);
+    font-family: 'Sofia', cursive;
+    color: black;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+}
+
+.leftArrow:hover {
+    font-size: clamp(1.5rem, 5vw, 5rem);
+    text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 0.5vw 1px black, -1px -1px 0 black, 0.5vw -1px 0 black, -1px 1px 0 black;
+    color: white;
+}
+
+.rightArrow:hover {
+    font-size: clamp(1.5rem, 6vw, 5rem);
+    text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -0.5vw -1px 0 black, 1px -1px 0 black, -0.5vw 1px 0 black;
+    color: white;
+}
+
 .subTitle {
-    margin: 0 0 0 9vw;
-    font-size: clamp(1rem, 8vw, 2rem);
+    margin: 0 0 0 5vw;
+    font-size: clamp(1rem, 4vw, 2rem);
     font-weight: 300;
     text-shadow: 0 0 0.5px black;
     color: #777777;
 }
 
-.line {
-    width: 200vw;
-    padding: 2vh 2vw 2vh 0;
-    display: flex;
-}
-
 .imageBox {
-    width: 24vw;
+    min-width: 24vw;
     height: 12vw;
-    margin: 0 2vw 0 0;
+    margin: 0.2vw;
     overflow: hidden;
     box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
@@ -41,22 +71,13 @@
 }
 
 .imageBox:hover {
-    width: 30vw;
-    height: 15vw;
-}
-
-.imageBox:hover {
-    width: 30vw;
+    min-width: 30vw;
     height: 15vw;
 }
 
 .imageBox:hover .linkContent {
     font-size: 1px;
     opacity: 1;
-}
-
-.imageBox:first-child {
-    margin: 0 2vw 0 6.5vw;
 }
 
 .linkContent {
@@ -88,7 +109,6 @@
 }
 
 .name {
-    z-index: 2;
     font-size: clamp(1rem, 2.2vw, 2.5rem);
     font-weight: bold;
     color: white;

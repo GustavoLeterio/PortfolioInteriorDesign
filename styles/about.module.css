@@ -2,11 +2,11 @@
     z-index: 2;
     padding-top: calc(1.5vh + 50px);
     min-height: calc(100vh - (1.5vh + 50px));
-    margin: 2vh 0 2vh 7vw;
     display: flex;
 }
 
 .wrapperText {
+    margin: 2vh 0 2vh 7vw;
     width: 100%;
     font-weight: 600;
     color: black;
@@ -45,7 +45,12 @@
         flex-direction: column;
     }
     .imageWrapper {
-        width: 80%;
+        width: 100vw;
+    }
+    .imageWrapper div {
+        align-items: flex-end;
+        float: right;
+        width: 70vw;
     }
     .text {
         margin: 0 14vw 2vh 0;
