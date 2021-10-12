@@ -6,6 +6,13 @@
             "name": "Escritório Bonito",
             "image": "../public/01.png",
             "link": "#"
+        },
+        {
+            "id": 2,
+            "category": "Escritório",
+            "name": "Escritório Bonito",
+            "image": "../public/01.png",
+            "link": "#"
         }
     ]
 }
