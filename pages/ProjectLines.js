@@ -5,7 +5,7 @@ import photo from '../public/01.png'
 
 export const getStaticProps = async () => {
 
-    const response = await fetch('https://jsonplaceholder.typicode.com/todos');
+    const response = await fetch('https://my-json-server.typicode.com/Leterinho/PortfolioInteriorDesign/card');
     const data = await response.json();
 
     return {
@@ -20,11 +20,11 @@ const ProjectLines = ({ data }) => {
             <div className={styles.lineWrapper}>
                 <a className={styles.leftArrow}>&#10094;</a>
                 <div className={styles.line}>
-                    {data.map((id, a) => (
+                    {data.map((id, title) => (
                         <div className={styles.imageBox}>
                             <Image src={photo} width={400} height={200} layout="responsive" lazy="true" placeholder="blur" />
                             <div className={styles.linkContent}>
-                                <span className={styles.name}>{a}</span>
+                                <span className={styles.name} key={id}>{title}</span>
                                 <Link href=""><a className={styles.link}>Veja Mais!</a></Link>
                             </div>
                         </div>
