@@ -1,25 +1,11 @@
 {
-    "cards": [
+    "card": [
         {
             "id": 1,
             "category": "Escritório",
             "title": "Escritório Bonito",
             "image": "../public/01.png",
-            "router": "#"
-        },
-        {
-            "id": 2,
-            "category": "Escritório",
-            "title": "Escritório Legal",
-            "image": "../public/01.png",
-            "router": "#"
-        },
-        {
-            "id": 3,
-            "category": "Escritório",
-            "title": "Diversão Garantida",
-            "image": "../public/01.png",
-            "router": "#"
+            "link": "#"
         }
     ]
 }
