@@ -1,5 +1,5 @@
 {
-    "cards": [
+    "office": [
         {  
             "id": 1,
             "categoryName": "Escritório",
@@ -13,7 +13,9 @@
             "name": "Escritório Bonito",
             "image": "/../public/03.jpg",
             "link": "#"
-        },
+        }
+    ],
+    "livingRoom":[
         {
             "id": 1,
             "categoryName": "Sala de Estar",
