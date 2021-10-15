@@ -1,0 +1,19 @@
+{
+    "office": [
+        {  
+            "id": 1,
+            "category": 1,
+            "categoryName": "Escritório Bonito",
+            "name": "Escritório Bonito",
+            "image": "/../public/01.png",
+            "link": "#"
+        },
+        {
+            "id": 2,
+            "category": 1,
+            "name": "Escritório Maneiro",
+            "image": "/../public/02.jpg",
+            "link": "#"
+        }
+    ]
+}
