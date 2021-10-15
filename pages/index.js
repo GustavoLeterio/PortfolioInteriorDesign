@@ -8,7 +8,7 @@ import Link from 'next/link'
 
 export const getStaticProps = async () => {
 
-  const res = await fetch("https://my-json-server.typicode.com/Leterinho/PortfolioInteriorDesign/office");
+  const res = await fetch("https://my-json-server.typicode.com/Leterinho/PortfolioInteriorDesign/db");
   const datas = await res.json();
 
   return {
