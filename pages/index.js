@@ -8,7 +8,7 @@ import Link from 'next/link'
 
 export const getStaticProps = async () => {
 
-  const res = await fetch("https://my-json-server.typicode.com/Leterinho/PortfolioInteriorDesign/card");
+  const res = await fetch("https://my-json-server.typicode.com/Leterinho/PortfolioInteriorDesign/office");
   const datas = await res.json();
 
   return {
@@ -31,12 +31,12 @@ export default function Home({ datas }) {
         <h1 className={styles.title}>Projetos</h1>
         <div className={styles.galery}>
           {datas.map((data) => (
-            <div className={styles.categoryWrapper} key={data.category}>
+            <div className={styles.categoryWrapper}>
               <h4 className={styles.subTitle}>{data.categoryName}</h4>
-              <div className={styles.lineWrapper}>
+              <div className={styles.lineWrapper} key={data.categoryName}>
                 <a className={styles.leftArrow}>&#10094;</a>
-                <div className={styles.line}>
-                  <div className={styles.imageBox}>
+                <div className={styles.line} >
+                  <div className={styles.imageBox} >
                     <Image src={data.image} blurDataURL={data.image} width={400} height={200} layout="responsive" lazy="true" placeholder="blur" />
                     <div className={styles.linkContent}>
                       <span className={styles.name}>{data.name}</span>
