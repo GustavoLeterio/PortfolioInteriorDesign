@@ -1,0 +1,19 @@
+{
+    "cards": [
+        {  
+            "id": 1,
+            "category": 1,
+            "categoryName": "Escritório",
+            "name": "Escritório Bonito",
+            "image": "/../public/01.png",
+            "link": "#"
+        },
+        {
+            "id": 2,
+            "categoryName": "Sala de",
+            "name": "Escritório Maneiro",
+            "image": "/../public/02.jpg",
+            "link": "#"
+        }
+    ]
+}
