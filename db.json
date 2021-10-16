@@ -1,21 +1,19 @@
 {
-    "office": [
-        {  
+    "cards": [
+        {
             "id": 1,
             "categoryName": "Escritório",
             "name": "Escritório Bonito",
             "image": "/../public/01.png",
             "link": "#"
         },
-        {  
+        {
             "id": 2,
             "categoryName": "Escritório",
             "name": "Escritório Bonito",
             "image": "/../public/03.jpg",
             "link": "#"
-        }
-    ],
-    "livingRoom":[
+        },
         {
             "id": 1,
             "categoryName": "Sala de Estar",

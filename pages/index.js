@@ -30,24 +30,24 @@ export default function Home({ datas }) {
       <div className={styles.galeryPage}>
         <h1 className={styles.title}>Projetos</h1>
         <div className={styles.galery}>
-          <div className={styles.categoryWrapper}>
-            <h4 className={styles.subTitle}></h4>
-            {datas.map((data) => (
+            <div className={styles.categoryWrapper} key={data.categoryName}>
+              <h4 className={styles.subTitle}></h4>
               <div className={styles.lineWrapper}>
                 <a className={styles.leftArrow}>&#10094;</a>
                 <div className={styles.line} >
-                  <div className={styles.imageBox} >
-                    <Image src={data.image} blurDataURL={data.image} width={400} height={200} layout="responsive" lazy="true" placeholder="blur" />
-                    <div className={styles.linkContent}>
-                      <span className={styles.name}>{data.name}</span>
-                      <Link href=""><a className={styles.link}>Veja Mais!</a></Link>
+                  {datas.office.map((data) => (
+                    <div className={styles.imageBox} key={data.categoryName}>
+                      <Image src={data.image} blurDataURL={data.image} width={400} height={200} layout="responsive" lazy="true" placeholder="blur" />
+                      <div className={styles.linkContent}>
+                        <span className={styles.name}>{data.name}</span>
+                        <Link href=""><a className={styles.link}>Veja Mais!</a></Link>
+                      </div>
                     </div>
-                  </div>
+                  ))}
                 </div>
                 <a className={styles.rightArrow}>&#10095;</a>
               </div>
-            ))}
-          </div>
+            </div>
         </div>
       </div>
     </>
