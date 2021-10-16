@@ -3,13 +3,13 @@
         {
             "id": 1,
             "name": "Escritório Bonito",
-            "image": "/../public/01.jpg",
+            "image": "https://res.cloudinary.com/djf0isef7/image/upload/v1634427118/01_momh9t.jpg",
             "link": "#"
         },
         {
             "id": 2,
             "name": "Escritório Maneiro",
-            "image": "/../public/02.jpg",
+            "image": "https://res.cloudinary.com/djf0isef7/image/upload/v1634427119/02_qeupfq.jpg",
             "link": "#"
         }
     ],
@@ -17,7 +17,7 @@
         {
             "id": 1,
             "name": "Sala Gostosinha",
-            "image": "/../public/03.jpg",
+            "image": "https://res.cloudinary.com/djf0isef7/image/upload/v1634427119/03_fx3hs8.jpg",
             "link": "#"
         }
     ]

@@ -19,10 +19,10 @@ export const getStaticProps = async () => {
 export default function Home({ datas }) {
 
 
-  function Test(mod) {
+  function imageOrganizer(mod) {
     return (
       <div className={styles.imageBox} key={mod.id}>
-        <Image src="..public/01.jpg" width={400} height={200} layout="responsive" />
+        <Image src="https://res.cloudinary.com/djf0isef7/image/upload/v1634427118/01_momh9t.jpg" width={400} height={200} layout="responsive" />
         <div className={styles.linkContent}>
           <span className={styles.name}>{mod.name}</span>
           <Link href=""><a className={styles.link}>Veja Mais!</a></Link>
@@ -31,14 +31,14 @@ export default function Home({ datas }) {
     )
   }
 
-  function line(data, category) {
+  function lineOrganizer(data, category) {
     return (
       <div className={styles.categoryWrapper} >
         <h4 className={styles.subTitle}>{category}</h4>
         <div className={styles.lineWrapper}>
           <a className={styles.leftArrow}>&#10094;</a>
           <div className={styles.line} >
-            {data.map((mod) => (<>{Test(mod)}</>))}
+            {data.map((mod) => (<>{imageOrganizer(mod)}</>))}
           </div>
           <a className={styles.rightArrow}>&#10095;</a>
         </div>
@@ -59,8 +59,8 @@ export default function Home({ datas }) {
       <div className={styles.galeryPage}>
         <h1 className={styles.title}>Projetos</h1>
         <div className={styles.galery}>
-          {line(datas.office, "Escritório")}
-          {line(datas.livingRoom, "Sala de Estar")}
+          {lineOrganizer(datas.office, "Escritório")}
+          {lineOrganizer(datas.livingRoom, "Sala de Estar")}
         </div>
       </div>
     </>
