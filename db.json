@@ -3,13 +3,13 @@
         {
             "id": 1,
             "name": "Escritório Bonito",
-            "image": "../public/01.png",
+            "image": "{image01}",
             "link": "#"
         },
         {
             "id": 2,
             "name": "Escritório Maneiro",
-            "image": "../public/02.jpg",
+            "image": "{image02}",
             "link": "#"
         }
     ],
@@ -17,7 +17,7 @@
         {
             "id": 1,
             "name": "Sala Gostosinha",
-            "image": "../public/03.jpg",
+            "image": "{image03}",
             "link": "#"
         }
     ]
