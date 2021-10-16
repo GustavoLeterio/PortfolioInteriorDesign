@@ -8,7 +8,7 @@ import Link from 'next/link'
 
 export const getStaticProps = async () => {
 
-  const res = await fetch("https://my-json-server.typicode.com/Leterinho/PortfolioInteriorDesign/cards");
+  const res = await fetch("https://my-json-server.typicode.com/Leterinho/PortfolioInteriorDesign/db");
   const datas = await res.json();
 
   return {
@@ -30,19 +30,19 @@ export default function Home({ datas }) {
     )
   }
 
-  function line(category) {
-    return (<>
+  function line(data, category) {
+    return (
       <div className={styles.categoryWrapper} >
         <h4 className={styles.subTitle}>{category}</h4>
         <div className={styles.lineWrapper}>
           <a className={styles.leftArrow}>&#10094;</a>
           <div className={styles.line} >
-            {datas.map((data) => (<>{Test(data)}</>))}
+            {data.map((data) => (<>{Test(data)}</>))}
           </div>
           <a className={styles.rightArrow}>&#10095;</a>
         </div>
       </div>
-    </>)
+    )
   }
   return (
     <>
@@ -57,7 +57,8 @@ export default function Home({ datas }) {
       <div className={styles.galeryPage}>
         <h1 className={styles.title}>Projetos</h1>
         <div className={styles.galery}>
-          {line("Escritório")}
+          {line(datas.office, "Escritório")}
+          {line(datas.livingRoom, "Escritório")}
         </div>
       </div>
     </>
