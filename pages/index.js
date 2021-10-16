@@ -5,6 +5,9 @@ import About from '../components/About'
 import styles from '../styles/galery.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
+import image01 from '/../public/01.jpg'
+import image02 from '/../public/02.jpg'
+import image03 from '/../public/03.jpg'
 
 export const getStaticProps = async () => {
 
@@ -21,7 +24,7 @@ export default function Home({ datas }) {
   function Test(mod) {
     return (
       <div className={styles.imageBox} key={mod.id}>
-        <Image src={mod.image} blurDataURL={mod.image} width={400} height={200} layout="responsive" lazy="true" placeholder="blur" />
+        <Image src={mod.image} width={400} height={200} layout="responsive" lazy="true" placeholder="blur" />
         <div className={styles.linkContent}>
           <span className={styles.name}>{mod.name}</span>
           <Link href=""><a className={styles.link}>Veja Mais!</a></Link>
