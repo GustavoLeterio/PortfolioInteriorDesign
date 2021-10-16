@@ -22,7 +22,7 @@ export default function Home({ datas }) {
   function Test(mod) {
     return (
       <div className={styles.imageBox} key={mod.id}>
-        <Image src={mod.image} blurDataURL={mod.image} width={400} height={200} layout="responsive" placeholder="blur" />
+        <Image src={mod.image} width={400} height={200} layout="responsive" />
         <div className={styles.linkContent}>
           <span className={styles.name}>{mod.name}</span>
           <Link href=""><a className={styles.link}>Veja Mais!</a></Link>
@@ -50,6 +50,7 @@ export default function Home({ datas }) {
       <Head>
         <title>Portfólio Julia Costa</title>
         <meta name="description" content="Julia Costa Designer de Interiores" />
+        <meta name="keywords" content="Julia Costa, Designer de Interiores, Portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
