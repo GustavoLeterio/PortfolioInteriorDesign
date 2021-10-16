@@ -18,6 +18,7 @@ export const getStaticProps = async () => {
 
 export default function Home({ datas }) {
 
+
   function Test(mod) {
     return (
       <div className={styles.imageBox} key={mod.id}>
