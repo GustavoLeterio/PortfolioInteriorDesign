@@ -2,10 +2,9 @@ import Head from 'next/head'
 import Navbar from '../components/Navbar'
 import LandingPage from '../components/LandingPage'
 import About from '../components/About'
-import styles from '../styles/galery.module.css'
 
 
-export default function Home({ datas }) {
+export default function Home() {
 
   return (
     <>
@@ -17,20 +16,6 @@ export default function Home({ datas }) {
       <Navbar />
       <LandingPage />
       <About />
-      <div className={styles.galeryPage}>
-        <h1 className={styles.title}>Projetos</h1>
-        <div className={styles.galery}>
-          <div className={styles.categoryWrapper} >
-            <h4 className={styles.subTitle}>a</h4>
-            <div className={styles.lineWrapper}>
-              <a className={styles.leftArrow}>&#10094;</a>
-              <div className={styles.line} >
-              </div>
-              <a className={styles.rightArrow}>&#10095;</a>
-            </div>
-          </div>
-        </div>
-      </div>
     </>
   )
 }
