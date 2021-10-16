@@ -3,18 +3,7 @@ import Navbar from '../components/Navbar'
 import LandingPage from '../components/LandingPage'
 import About from '../components/About'
 import styles from '../styles/galery.module.css'
-import Image from 'next/image'
-import Link from 'next/link'
 
-export const getStaticProps = async () => {
-
-  const res = await fetch("https://my-json-server.typicode.com/Leterinho/PortfolioInteriorDesign/office");
-  const datas = await res.json();
-
-  return {
-    props: { datas }
-  }
-}
 
 export default function Home({ datas }) {
 
