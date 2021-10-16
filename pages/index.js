@@ -22,7 +22,7 @@ export default function Home({ datas }) {
   function Test(mod) {
     return (
       <div className={styles.imageBox} key={mod.id}>
-        <Image src={mod.image} blurDataURL={mod.image} width={400} height={200} layout="responsive" lazy="true" placeholder="blur" />
+        <Image src={mod.image} blurDataURL={mod.image} width={400} height={200} layout="responsive" placeholder="blur" />
         <div className={styles.linkContent}>
           <span className={styles.name}>{mod.name}</span>
           <Link href=""><a className={styles.link}>Veja Mais!</a></Link>
