@@ -22,7 +22,7 @@ export default function Home({ datas }) {
   function imageOrganizer(mod) {
     return (
       <div className={styles.imageBox} key={mod.id}>
-        <Image src="https://res.cloudinary.com/djf0isef7/image/upload/v1634427118/01_momh9t.jpg" width={400} height={200} layout="responsive" />
+        <Image src={mod.image} blurDataURL={mod.image} width={400} height={200} layout="responsive" placeholder="blur" />
         <div className={styles.linkContent}>
           <span className={styles.name}>{mod.name}</span>
           <Link href=""><a className={styles.link}>Veja Mais!</a></Link>
