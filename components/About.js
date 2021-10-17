@@ -22,7 +22,7 @@ const AboutPage = () => {
                     exercitation deserunt ipsum deserunt ex incididunt ipsum nulla laboris magna ullamco fugiat. Aute aliqua consequat commodo laboris consequat aute.
                 </p>
             </div>
-            <div className={styles.imageWrapper}><Image src={aboutImage} layout="responsive" lazy placeholder="blur" /></div>
+            <div className={styles.imageWrapper}><Image src={aboutImage} layout="responsive" placeholder="blur" /></div>
         </div>
     );
 }

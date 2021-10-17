@@ -8,7 +8,7 @@ const LandingPage = () => {
             <div className={styles.backgroundImage}><Image src={landPageBackground} layout="fill" objectFit="cover" objectPosition="center"/></div>
             <div className={styles.wrapperTitle}>
                 <h1 className={styles.title}>
-                    Design de Interior
+                    Design de Interiores
                 </h1>
                 <h2 className={styles.subtitle}>
                     Julia Costa
