@@ -13,7 +13,7 @@
 }
 
 .title {
-    font-size: clamp(3rem, 8vw, 6rem);
+    font-size: clamp(3.5rem, 7vw, 6rem);
     font-weight: bold;
     line-height: 113%;
     font-family: 'Josefin Sans', sans-serif;
@@ -40,7 +40,28 @@
     }
 }
 
-@media (max-width:768px) {
+@media (max-width:1024px) {
+    .title {
+        font-size: clamp(3.5rem, 12vw, 10rem);
+    }
+    .aboutPage {
+        flex-direction: column;
+    }
+    .imageWrapper {
+        width: 100vw;
+    }
+    .imageWrapper div {
+        align-items: flex-end;
+        float: right;
+        width: 60vw;
+    }
+    .text {
+        font-size: clamp(2rem, 5vw, 2.5rem);
+        margin: 0 14vw 2vh 0;
+    }
+}
+
+@media (max-width:767px) {
     .aboutPage {
         flex-direction: column;
     }
@@ -53,6 +74,7 @@
         width: 70vw;
     }
     .text {
+        font-size: clamp(1.5rem, 2vw, 2rem);
         margin: 0 14vw 2vh 0;
     }
 }

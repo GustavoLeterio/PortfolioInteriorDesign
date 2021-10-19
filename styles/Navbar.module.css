@@ -31,5 +31,18 @@
 }
 
 .link:hover {
-    color: red;
+    color: #f6f6f6;
+    text-shadow: 2px 0 0 Black, -2px 0 0 Black, 0 2px 0 Black, 0 -2px 0 Black, 1px 1px Black, -1px -1px 0 Black, 1px -1px 0 Black, -1px 1px 0 Black;
+}
+
+@media (max-width:1024px) {
+    .link {
+        font-size: clamp(2.2rem, 4vw, 2.8rem);
+    }
+}
+
+@media (max-width:767px) {
+    .link {
+        font-size: clamp(1.2rem, 2.5vw, 2rem);
+    }
 }

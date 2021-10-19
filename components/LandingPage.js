@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const LandingPage = () => {
     return (
-        <div className={styles.landingPage}>
+        <div className={styles.landingPage} id="top">
             <div className={styles.backgroundImage}><Image src={landPageBackground} layout="fill" objectFit="cover" objectPosition="center"/></div>
             <div className={styles.wrapperTitle}>
                 <h1 className={styles.title}>

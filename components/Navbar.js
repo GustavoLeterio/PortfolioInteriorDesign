@@ -6,7 +6,7 @@ const Navbar = () => {
     return (
         <nav className={styles.Navbar}>
             <div className={styles.home}>
-                <Link href="#">
+                <Link href="" >
                     <a>
                         <SVG className={styles.homeLogo} />
                     </a>
