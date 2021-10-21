@@ -1,3 +1,5 @@
+import React, { useRef } from 'react';
+import Slider from 'react-slick';
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
 import LandingPage from '../components/LandingPage'
@@ -5,6 +7,7 @@ import About from '../components/About'
 import styles from '../styles/galery.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
+import ContactPage from '../components/Contact'
 
 export const getStaticProps = async () => {
   const res = await fetch("https://my-json-server.typicode.com/Leterinho/PortfolioInteriorDesign/db");
@@ -15,45 +18,33 @@ export const getStaticProps = async () => {
 }
 
 export default function Home({ datas }) {
-  function imageOrganizer(mod) {
-    return (
-      <>
-        <div className={styles.imageBox} key={mod.id}>
-          <Image src={mod.image} blurDataURL={mod.image} width={400} height={200} layout="responsive" placeholder="blur" />
-          <div className={styles.linkContent}>
-            <span className={styles.name}>{mod.name}</span>
-            <Link href=""><a className={styles.link}>Veja Mais!</a></Link>
-          </div>
-        </div><div className={styles.imageBox} key={mod.id}>
-          <Image src={mod.image} blurDataURL={mod.image} width={400} height={200} layout="responsive" placeholder="blur" />
-          <div className={styles.linkContent}>
-            <span className={styles.name}>{mod.name}</span>
-            <Link href=""><a className={styles.link}>Veja Mais!</a></Link>
-          </div>
-        </div>
-        <div className={styles.imageBox} key={mod.id}>
-          <Image src={mod.image} blurDataURL={mod.image} width={400} height={200} layout="responsive" placeholder="blur" />
-          <div className={styles.linkContent}>
-            <span className={styles.name}>{mod.name}</span>
-            <Link href=""><a className={styles.link}>Veja Mais!</a></Link>
-          </div>
-        </div>
-      </>
-    )
-  }
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 2
+  };
+
   function lineOrganizer(data, category) {
     return (
       <div className={styles.categoryWrapper} >
         <h4 className={styles.subTitle}>{category}</h4>
-        <div className={styles.lineWrapper}>
-          <a className={styles.leftArrow}>&#10094;</a>
-          <div>
-            <div className={styles.line} >
-              {data.map((mod) => (<>{imageOrganizer(mod)}</>))}
-            </div>
-          </div>
-          <a className={styles.rightArrow}>&#10095;</a>
-        </div>
+        <Slider {...settings}>
+          {data.map((mod) => (
+            <>{
+              <>
+                <div className={styles.imageBox} id="image" key={mod.id}>
+                  <Image src={mod.image} blurDataURL={mod.image} width={400} height={200} layout="responsive" placeholder="blur" />
+                  <div className={styles.linkContent}>
+                    <span className={styles.name}>{mod.name}</span>
+                    <Link href=""><a className={styles.link}>Veja Mais!</a></Link>
+                  </div>
+                </div>
+              </>
+            }</>
+          ))}
+        </Slider>
       </div>
     )
   }
@@ -75,6 +66,7 @@ export default function Home({ datas }) {
           {lineOrganizer(datas.livingRoom, "Sala de Estar")}
         </div>
       </div>
+      <ContactPage />
     </>
   )
 }

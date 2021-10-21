@@ -8,7 +8,7 @@ const Navbar = () => {
             <div className={styles.home}>
                 <Link href="" >
                     <a>
-                        <SVG className={styles.homeLogo} />
+                        <SVG />
                     </a>
                 </Link>
             </div>
