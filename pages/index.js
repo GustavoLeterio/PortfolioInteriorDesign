@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import Slider from 'react-slick';
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
@@ -17,31 +17,75 @@ export const getStaticProps = async () => {
   }
 }
 
+function SampleNextArrow(props) {
+  const { onClick } = props;
+  return (
+    <div className={styles.rightArrow} onClick={onClick} >&#10095;</div>
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { onClick } = props;
+  return (
+    <div className={styles.leftArrow} onClick={onClick} >&#10094;</div>
+  );
+}
+
 export default function Home({ datas }) {
   const settings = {
-    dots: true,
-    infinite: true,
+    draggable: false,
+    dots: false,
     speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 2
+    infinite: false,
+    slidesToScroll: 2,
+    slidesToShow: 1,
+    variableWidth: true,
+    prevArrow: <SamplePrevArrow />,
+    nextArrow: <SampleNextArrow />,
+    responsive: [
+      {
+        breakpoint: 1050,
+        settings: {
+          draggable: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrow:false
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
+          arrow:false
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrow:false
+        }
+      }
+    ]
   };
 
   function lineOrganizer(data, category) {
     return (
       <div className={styles.categoryWrapper} >
         <h4 className={styles.subTitle}>{category}</h4>
-        <Slider {...settings}>
+        <Slider className={styles.line} {...settings}>
           {data.map((mod) => (
             <>{
-              <>
-                <div className={styles.imageBox} id="image" key={mod.id}>
-                  <Image src={mod.image} blurDataURL={mod.image} width={400} height={200} layout="responsive" placeholder="blur" />
-                  <div className={styles.linkContent}>
-                    <span className={styles.name}>{mod.name}</span>
-                    <Link href=""><a className={styles.link}>Veja Mais!</a></Link>
-                  </div>
+              <div className={styles.imageBox} key={mod.id}>
+                <Image src={mod.image} blurDataURL={mod.image} width={400} height={200} layout="responsive" placeholder="blur" />
+                <div className={styles.linkContent}>
+                  <span className={styles.name}>{mod.name}</span>
+                  <Link href=""><a className={styles.link}>Veja Mais!</a></Link>
                 </div>
-              </>
+              </div>
             }</>
           ))}
         </Slider>
