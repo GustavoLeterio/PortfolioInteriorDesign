@@ -38,7 +38,7 @@ export default function Home({ datas }) {
     speed: 500,
     infinite: false,
     slidesToScroll: 2,
-    slidesToShow: 1,
+    slidesToShow: 3,
     variableWidth: true,
     prevArrow: <SamplePrevArrow />,
     nextArrow: <SampleNextArrow />,
@@ -71,7 +71,9 @@ export default function Home({ datas }) {
       }
     ]
   };
+function settingsFilter(){
 
+}
   function lineOrganizer(data, category) {
     return (
       <div className={styles.categoryWrapper} >
