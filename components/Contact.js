@@ -41,27 +41,27 @@ const ContactPage = () => {
                             <div className={styles.inputRows}>
                                 <fieldset className={styles.fieldset}>
                                     <legend align="right" className={styles.legend}>Nome</legend>
-                                    <input className={styles.input} type="text" name="firstName" placeholder="Seu Nome" autocomplete="off" required />
+                                    <input className={styles.input} type="text" name="firstName" placeholder="Seu Nome" autoComplete="off" required />
                                 </fieldset>
                                 <fieldset className={styles.fieldset}>
                                     <legend align="right" className={styles.legend}>Último Nome</legend>
-                                    <input className={styles.input} type="text" name="lastName" placeholder="Seu Último Nome" autocomplete="off" required />
+                                    <input className={styles.input} type="text" name="lastName" placeholder="Seu Último Nome" autoComplete="off" required />
                                 </fieldset>
                             </div>
                             <div className={styles.inputRows}>
                                 <fieldset className={styles.fieldset}>
                                     <legend align="right" className={styles.legend}>Email</legend>
-                                    <input className={styles.input} type="email" name="email" placeholder="Seu Email" autocomplete="off" required />
+                                    <input className={styles.input} type="email" name="email" placeholder="Seu Email" autoComplete="off" required />
                                 </fieldset>
                                 <fieldset className={styles.fieldset}>
                                     <legend align="right" className={styles.legend}>Telefone</legend>
-                                    <input className={styles.input} type="text" name="phoneNumber" onChange={numberMask} value={maskedValue} minlenght="14" placeholder="(__)_____-____" autocomplete="off" required />
+                                    <input className={styles.input} type="text" name="phoneNumber" onChange={numberMask} value={maskedValue} minlenght="14" placeholder="(__)_____-____" autoComplete="off" required />
                                 </fieldset>
                             </div>
                             <div className={styles.inputRows}>
                                 <fieldset className={styles.fieldset}>
                                     <legend align="right" className={styles.legend}>Mensagem</legend>
-                                    <textarea className={styles.input} type="text" onChange={recalculate} name="message" rows="6" maxLength="320" placeholder="Diga me o que pensa!" autocomplete="off" />
+                                    <textarea className={styles.input} type="text" onChange={recalculate} name="message" rows="6" maxLength="320" placeholder="Diga me o que pensa!" autoComplete="off" />
                                     <span className={styles.counter} id="counter">{countedValue} / 320</span>
                                 </fieldset>
                             </div>
