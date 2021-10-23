@@ -76,6 +76,10 @@
     width: 100%;
 }
 
+.inputRows:nth-last-child(1) {
+    justify-content: flex-end;
+}
+
 .input {
     width: 100%;
     padding: 0 0 0 1%;

@@ -1,10 +1,21 @@
 import Link from 'next/link'
 import styles from '../styles/Navbar.module.css'
+import React, { useEffect, useState } from 'react'
 import SVG from '../public/home.js'
 
 const Navbar = () => {
+    const [fadeNavbarProp, setNavbarProp] = useState({
+        fade: styles.fadeNavbar
+    });
+    useEffect(() => {
+        setInterval(() => {
+            if (fadeNavbarProp.fade === styles.fadeNavbar) {
+                setNavbarProp({ fade: styles.navbar })
+            }
+        }, 0);
+    });
     return (
-        <nav className={styles.Navbar}>
+        <nav className={fadeNavbarProp.fade}>
             <div className={styles.home}>
                 <Link href="" >
                     <a>

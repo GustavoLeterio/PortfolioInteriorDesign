@@ -9,25 +9,35 @@
     -webkit-box-shadow: inset 0 -15px 20px -10px black;
     box-shadow: inset 0 -15px 20px -10px black;
 }
+
 .backgroundImage {
     z-index: 0;
 }
 
 .wrapperTitle {
+    padding: 0;
+    opacity: 1;
     z-index: 1;
     font-weight: 600;
     text-shadow: 0px 3px 10px #000000;
     color: white;
     text-align: center;
     font-family: 'Josefin Sans', sans-serif;
+    transition: 0.7s ease-in-out;
+}
+.wrapperFadeTitle {
+    opacity: 0;
+    padding-top: 75px;
+    text-shadow: 0px 10px 20px #000000;
+    color: black;
 }
 
 .title {
     font-size: clamp(1rem, 8vw, 6rem);
     font-weight: normal;
     line-height: 113%;
+    opacity: 1;
 }
-
 .subtitle {
     font-size: clamp(0.5rem, 6vw, 4rem);
     font-weight: normal;

@@ -62,7 +62,7 @@ const ContactPage = () => {
                             <div className={styles.inputRows}>
                                 <fieldset className={styles.fieldset}>
                                     <legend align="right" className={styles.legend}>Mensagem</legend>
-                                    <textarea className={styles.input} type="text" onChange={recalculate} name="message" rows="6" maxLength="320" placeholder="Diga me o que pensa!" autoComplete="off" />
+                                    <textarea className={styles.input} type="text" onChange={recalculate} name="message" rows="5" maxLength="320" placeholder="Diga me o que pensa!" autoComplete="off" />
                                     <span className={styles.counter} id="counter">{countedValue} / 320</span>
                                 </fieldset>
                             </div>
