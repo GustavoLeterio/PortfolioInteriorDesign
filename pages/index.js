@@ -104,13 +104,13 @@ export default function Home({ datas }) {
       <div className={styles.galeryPage}>
         <h1 className={styles.title}>Projetos</h1>
         <div className={styles.galery}>
+          {lineOrganizer(datas.RNT, "Projeto RNT")}
           {lineOrganizer(datas.ECRT, "Projeto ECRT")}
           {lineOrganizer(datas.ESP, "Projeto ESP")}
           {lineOrganizer(datas.FLD, "Projeto FLD")}
           {lineOrganizer(datas.ISAB, "Projeto ISAB")}
           {lineOrganizer(datas.OFT, "Projeto OFT")}
           {lineOrganizer(datas.PTG, "Projeto PTG")}
-          {lineOrganizer(datas.RNT, "Projeto RNT")}
         </div>
       </div>
       <ContactPage />
