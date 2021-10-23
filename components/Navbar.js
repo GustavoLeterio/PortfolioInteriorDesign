@@ -8,11 +8,9 @@ const Navbar = () => {
         fade: styles.fadeNavbar
     });
     useEffect(() => {
-        setInterval(() => {
-            if (fadeNavbarProp.fade === styles.fadeNavbar) {
-                setNavbarProp({ fade: styles.navbar })
-            }
-        }, 0);
+        if (fadeNavbarProp.fade === styles.fadeNavbar) {
+            setNavbarProp({ fade: styles.navbar })
+        }
     });
     return (
         <nav className={fadeNavbarProp.fade}>
