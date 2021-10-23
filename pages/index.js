@@ -33,7 +33,7 @@ function SamplePrevArrow(props) {
 }
 
 export default function Home({ datas }) {
-  function lineOrganizer(data, id, category) {
+  function lineOrganizer(data, category) {
 
     function settingCustomizer(itemQuantity, firstCondition, secondCondition) {
       return Object.keys(data).length > itemQuantity ? firstCondition : secondCondition;
@@ -71,7 +71,7 @@ export default function Home({ datas }) {
     return (
       <div className={styles.categoryWrapper} >
         <h4 className={styles.subTitle}>{category}</h4>
-        <Slider className={styles.line} id={id} {...settings}>
+        <Slider className={styles.line} {...settings}>
           {data.map((mod) => (
             <>{
               <div className={styles.itemContent}>
@@ -104,8 +104,13 @@ export default function Home({ datas }) {
       <div className={styles.galeryPage}>
         <h1 className={styles.title}>Projetos</h1>
         <div className={styles.galery}>
-          {lineOrganizer(datas.office, "moreThanThree", "Escritório")}
-          {lineOrganizer(datas.livingRoom, "lessThanFour", "Sala de Estar")}
+          {lineOrganizer(datas.ECRT, "Projeto ECRT")}
+          {lineOrganizer(datas.ESP, "Projeto ESP")}
+          {lineOrganizer(datas.FLD, "Projeto FLD")}
+          {lineOrganizer(datas.ISAB, "Projeto ISAB")}
+          {lineOrganizer(datas.OFT, "Projeto OFT")}
+          {lineOrganizer(datas.PTG, "Projeto PTG")}
+          {lineOrganizer(datas.RNT, "Projeto RNT")}
         </div>
       </div>
       <ContactPage />

@@ -1,6 +1,5 @@
 import styles from '../styles/about.module.css'
 import Image from 'next/image'
-import aboutImage from '../public/aboutImage.png'
 
 const AboutPage = () => {
     return (
@@ -22,7 +21,7 @@ const AboutPage = () => {
                     exercitation deserunt ipsum deserunt ex incididunt ipsum nulla laboris magna ullamco fugiat. Aute aliqua consequat commodo laboris consequat aute.
                 </p>
             </div>
-            <div className={styles.imageWrapper}><Image src={aboutImage} layout="responsive" placeholder="blur" /></div>
+            <div className={styles.imageWrapper}><Image src="https://res.cloudinary.com/djf0isef7/image/upload/v1635020544/public/aboutImage_dgza1m.png" width={849} height={999} layout="responsive" /></div>
         </div>
     );
 }

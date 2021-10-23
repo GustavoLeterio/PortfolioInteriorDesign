@@ -1,6 +1,5 @@
 import styles from '../styles/contact.module.css'
 import Image from 'next/image'
-import contactImage from '../public/contactImage.jpg'
 import InstagramLogo from '../public/InstagramLogo'
 import LinkedinLogo from '../public/LinkedinLogo.js'
 import ResumeLogo from '../public/ResumeLogo'
@@ -33,7 +32,7 @@ const ContactPage = () => {
 
     return (
         <div className={styles.contactPage}>
-            <div className={styles.backgroundImage}><Image src={contactImage} objectFit="cover" objectPosition="center" /></div>
+            <div className={styles.backgroundImage}><Image src="https://res.cloudinary.com/djf0isef7/image/upload/v1635020544/public/contactImage_unuecn.jpg" width={1920} height={1080} objectFit="cover" objectPosition="center" /></div>
             <div className={styles.contentWrapper}>
                 <div className={styles.mailSenderWrapper}>
                     <h1 className={styles.title}>Entre em Contato</h1>
