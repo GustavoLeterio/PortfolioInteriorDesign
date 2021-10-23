@@ -11,51 +11,46 @@ import ContactPage from '../components/Contact'
 
 
 export const getStaticProps = async () => {
-  const res = await fetch("https://my-json-server.typicode.com/Leterinho/PortfolioInteriorDesign/db");
+  const res = await fetch("http://localhost:3000/api/db");
   const datas = await res.json();
   return {
     props: { datas }
   }
 }
 
-function SampleNextArrow(props) {
+function SampleArrow(props) {
   const { onClick } = props;
   return (
     <div className={styles.rightArrow} onClick={onClick} >{props.content}</div>
   );
 }
 
-function SamplePrevArrow(props) {
-  const { onClick } = props;
-  return (
-    <div className={styles.leftArrow} onClick={onClick} >{props.content}</div>
-  );
-}
 
 export default function Home({ datas }) {
   function lineOrganizer(data, category) {
 
-    function settingCustomizer(itemQuantity, firstCondition, secondCondition) {
-      return Object.keys(data).length > itemQuantity ? firstCondition : secondCondition;
+    function settingCustomizer(condition) {
+      return Object.keys(data).length > 3 ? condition : <SampleArrow content="&nbsp;" />;
     }
 
     let settings = {
+      arrow: true,
       draggable: false,
       dots: false,
       speed: 300,
       infinite: false,
-      slidesToScroll: settingCustomizer(4, 2, 0),
-      slidesToShow: settingCustomizer(4, 3, 1),
+      slidesToScroll: 1,
+      slidesToShow: settingCustomizer(3),
       variableWidth: true,
-      prevArrow: settingCustomizer(4, <SamplePrevArrow content="&#10094;" />, <SamplePrevArrow content="&nbsp;" />),
-      nextArrow: settingCustomizer(4, <SampleNextArrow content="&#10095;" />, <SampleNextArrow content="&nbsp;" />),
+      prevArrow: settingCustomizer(<SampleArrow content="&#10094;" />),
+      nextArrow: settingCustomizer(<SampleArrow content="&#10095;" />),
       responsive: [
         {
           breakpoint: 1050,
           settings: {
             draggable: true,
             slidesToScroll: 1,
-            slidesToShow: 2
+            slidesToShow: settingCustomizer(2)
           }
         },
         {
@@ -104,13 +99,13 @@ export default function Home({ datas }) {
       <div className={styles.galeryPage}>
         <h1 className={styles.title}>Projetos</h1>
         <div className={styles.galery}>
-          {lineOrganizer(datas.RNT, "Projeto RNT")}
-          {lineOrganizer(datas.ECRT, "Projeto ECRT")}
-          {lineOrganizer(datas.ESP, "Projeto ESP")}
-          {lineOrganizer(datas.FLD, "Projeto FLD")}
-          {lineOrganizer(datas.ISAB, "Projeto ISAB")}
-          {lineOrganizer(datas.OFT, "Projeto OFT")}
-          {lineOrganizer(datas.PTG, "Projeto PTG")}
+          {lineOrganizer(datas.rnt, "Projeto RNT")}
+          {lineOrganizer(datas.ecrt, "Projeto ECRT")}
+          {lineOrganizer(datas.esp, "Projeto ESP")}
+          {lineOrganizer(datas.fld, "Projeto FLD")}
+          {lineOrganizer(datas.isab, "Projeto ISAB")}
+          {lineOrganizer(datas.oft, "Projeto OFT")}
+          {lineOrganizer(datas.ptg, "Projeto PTG")}
         </div>
       </div>
       <ContactPage />
