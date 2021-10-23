@@ -12,10 +12,9 @@
     line-height: 113%;
 }
 
-
-
 .categoryWrapper {
     margin: 5vh 0 0 5vw;
+    min-height: 37vh;
 }
 
 .line {
@@ -85,9 +84,10 @@
     opacity: 1;
 }
 
-.imageBox:hover .linkContent .link{
+.imageBox:hover .linkContent .link {
     display: inherit;
 }
+
 .linkContent {
     transform: translateY(0);
     display: flex;
@@ -122,7 +122,16 @@
     color: white;
 }
 
+@media (max-width:1280px) {
+    .categoryWrapper {
+        min-height: 28vh;
+    }
+}
+
 @media (max-width:1024px) {
+    .categoryWrapper {
+        min-height: 27vh;
+    }
     .leftArrow, .rightArrow {
         display: none;
     }
@@ -136,8 +145,8 @@
         font-size: clamp(2rem, 6vw, 4rem);
     }
     .imageBox {
-        min-width: 35vw;
-        height: 17.5vw;
+        min-width: 40vw;
+        height: 20vw;
         margin: 0.3vw;
         box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.25);
         border-radius: 5px;
@@ -148,8 +157,8 @@
         height: 100%;
     }
     .imageBox:hover {
-        min-width: 40vw;
-        height: 22vw;
+        min-width: 50vw;
+        height: 25vw;
     }
     .leftArrow, .rightArrow {
         width: 6vw;
@@ -186,17 +195,16 @@
         transform: translateY(-67%);
     }
     .name {
-        font-size: 3vw;
+        font-size: 3.2vw;
     }
     .link {
-        font-size: 2.3vw;
+        font-size: 2.8vw;
         padding: 4% 5% 3% 5%;
         border-radius: 6px;
     }
 }
 
 @media (max-width:767px) {
-    
     .subTitle {
         font-size: clamp(1rem, 8vw, 2.5rem);
     }

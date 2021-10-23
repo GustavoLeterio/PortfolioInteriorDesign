@@ -23,10 +23,14 @@
     color: white;
     text-align: center;
     font-family: 'Josefin Sans', sans-serif;
-    transition: 0.7s ease-in-out;
+    transition: 0.6s ease-in-out;
 }
 .wrapperFadeTitle {
     opacity: 0;
+    font-weight: 600;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    transition: 0.6s ease-in-out;
     padding-top: 75px;
     text-shadow: 0px 10px 20px #000000;
     color: black;
