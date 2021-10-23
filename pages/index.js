@@ -63,7 +63,7 @@ export default function Home({ datas }) {
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
-            focusOnSelect:true
+            focusOnSelect: true
           }
         }
       ]
@@ -80,12 +80,6 @@ export default function Home({ datas }) {
                   <span className={styles.name}>{mod.name}</span>
                   <Link href=""><a className={styles.link}>Veja Mais!</a></Link>
                 </div>
-                <style jsx>{`
-                  .line{
-                    margin: 50vw;
-                  }
-                  `}
-                </style>
               </div>
             }</>
           ))}

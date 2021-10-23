@@ -11,6 +11,7 @@ import ResumeLogoActive from '../public/ResumeLogoActive'
 import FacebookLogoActive from '../public/FacebookLogoActive'
 import { useState } from 'react'
 import { mask, unMask } from 'remask'
+import Link from 'next/link'
 
 const ContactPage = () => {
     const [maskedValue, setMaskedValue] = useState("");
@@ -73,10 +74,10 @@ const ContactPage = () => {
                 </div>
                 <div className={styles.socialMedia}>
                     <div className={styles.socialMediasBoxes}>
-                        <div className={styles.svg}><FacebookLogo /></div>
-                        <div className={styles.svg}><InstagramLogo /></div>
-                        <div className={styles.svg}><LinkedinLogo /></div>
-                        <div className={styles.svg}><ResumeLogo /></div>
+                        <div className={styles.svg}><Link href="https://www.facebook.com/profile.php?id=100009988028985"><a target="_blank"><FacebookLogo /></a></Link></div>
+                        <div className={styles.svg}><Link href="https://www.instagram.com/julia_costt/" ><a target="_blank"><InstagramLogo /></a></Link></div>
+                        <div className={styles.svg}><Link href="https://www.linkedin.com/in/julia-soares-costa-37b920192/"><a target="_blank"><LinkedinLogo /></a></Link></div>
+                        <div className={styles.svg}><Link href=""><a target="_blank"><ResumeLogo /></a></Link></div>
                     </div>
                     <div className={styles.socialMediasBoxesActive}>
                         <div className={styles.svgActive}><FacebookLogoActive /></div>
