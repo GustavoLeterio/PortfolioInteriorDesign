@@ -74,11 +74,13 @@ export default function Home({ datas }) {
         <Slider className={styles.line} id={id} {...settings}>
           {data.map((mod) => (
             <>{
-              <div className={styles.imageBox} key={mod.id}>
-                <Image src={mod.image} width={400} height={200} layout="responsive" />
-                <div className={styles.linkContent}>
-                  <span className={styles.name}>{mod.name}</span>
-                  <Link href=""><a className={styles.link}>Veja Mais!</a></Link>
+              <div className={styles.itemContent}>
+                <div className={styles.imageBox} key={mod.id}>
+                  <Image src={mod.image} width={400} height={200} layout="responsive" />
+                  <div className={styles.linkContent}>
+                    <span className={styles.name}>{mod.name}</span>
+                    <Link href=""><a className={styles.link}>Veja Mais!</a></Link>
+                  </div>
                 </div>
               </div>
             }</>
