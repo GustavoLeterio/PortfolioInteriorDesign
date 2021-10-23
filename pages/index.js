@@ -1,4 +1,4 @@
-import React from 'react';
+import { React, useEffect } from 'react';
 import Slider from 'react-slick';
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
@@ -8,6 +8,7 @@ import styles from '../styles/galery.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
 import ContactPage from '../components/Contact'
+
 
 export const getStaticProps = async () => {
   const res = await fetch("https://my-json-server.typicode.com/Leterinho/PortfolioInteriorDesign/db");
@@ -20,73 +21,71 @@ export const getStaticProps = async () => {
 function SampleNextArrow(props) {
   const { onClick } = props;
   return (
-    <div className={styles.rightArrow} onClick={onClick} >&#10095;</div>
+    <div className={styles.rightArrow} onClick={onClick} >{props.content}</div>
   );
 }
 
 function SamplePrevArrow(props) {
   const { onClick } = props;
   return (
-    <div className={styles.leftArrow} onClick={onClick} >&#10094;</div>
+    <div className={styles.leftArrow} onClick={onClick} >{props.content}</div>
   );
 }
 
 export default function Home({ datas }) {
-  const settings = {
-    draggable: false,
-    dots: false,
-    speed: 500,
-    infinite: false,
-    slidesToScroll: 2,
-    slidesToShow: 3,
-    variableWidth: true,
-    prevArrow: <SamplePrevArrow />,
-    nextArrow: <SampleNextArrow />,
-    responsive: [
-      {
-        breakpoint: 1050,
-        settings: {
-          draggable: true,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          arrow:false
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 1,
-          arrow:false
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          arrow:false
-        }
-      }
-    ]
-  };
-function settingsFilter(){
+  function lineOrganizer(data, id, category) {
 
-}
-  function lineOrganizer(data, category) {
+    function settingCustomizer(itemQuantity, firstCondition, secondCondition) {
+      return Object.keys(data).length > itemQuantity ? firstCondition : secondCondition;
+    }
+
+    let settings = {
+      draggable: false,
+      dots: false,
+      speed: 300,
+      infinite: false,
+      slidesToScroll: settingCustomizer(4, 2, 0),
+      slidesToShow: settingCustomizer(4, 3, 1),
+      variableWidth: true,
+      prevArrow: settingCustomizer(4, <SamplePrevArrow content="&#10094;" />, <SamplePrevArrow content="&nbsp;" />),
+      nextArrow: settingCustomizer(4, <SampleNextArrow content="&#10095;" />, <SampleNextArrow content="&nbsp;" />),
+      responsive: [
+        {
+          breakpoint: 1050,
+          settings: {
+            draggable: true,
+            slidesToScroll: 1,
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            focusOnSelect:true
+          }
+        }
+      ]
+    };
     return (
       <div className={styles.categoryWrapper} >
         <h4 className={styles.subTitle}>{category}</h4>
-        <Slider className={styles.line} {...settings}>
+        <Slider className={styles.line} id={id} {...settings}>
           {data.map((mod) => (
             <>{
               <div className={styles.imageBox} key={mod.id}>
-                <Image src={mod.image} blurDataURL={mod.image} width={400} height={200} layout="responsive" placeholder="blur" />
+                <Image src={mod.image} width={400} height={200} layout="responsive" />
                 <div className={styles.linkContent}>
                   <span className={styles.name}>{mod.name}</span>
                   <Link href=""><a className={styles.link}>Veja Mais!</a></Link>
                 </div>
+                <style jsx>{`
+                  .line{
+                    margin: 50vw;
+                  }
+                  `}
+                </style>
               </div>
             }</>
           ))}
@@ -108,8 +107,8 @@ function settingsFilter(){
       <div className={styles.galeryPage}>
         <h1 className={styles.title}>Projetos</h1>
         <div className={styles.galery}>
-          {lineOrganizer(datas.office, "Escritório")}
-          {lineOrganizer(datas.livingRoom, "Sala de Estar")}
+          {lineOrganizer(datas.office, "moreThanThree", "Escritório")}
+          {lineOrganizer(datas.livingRoom, "lessThanFour", "Sala de Estar")}
         </div>
       </div>
       <ContactPage />
