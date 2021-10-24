@@ -165,7 +165,6 @@ export default function Home({ datas }) {
         <meta name="description" content="Julia Costa Designer de Interiores" />
         <meta name="keywords" content="Julia Costa, Designer de Interiores, Portfolio" />
         <meta property="og:image" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
       <LandingPage />
