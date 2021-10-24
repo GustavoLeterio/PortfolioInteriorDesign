@@ -13,26 +13,103 @@
     margin: 1vh 2vw;
 }
 
+.home::after {
+    z-index: -1;
+    position: absolute;
+    transform: translate(-35px, 32px);
+    padding: 10px;
+    filter: blur(5px);
+    content: '';
+    background-color: yellow;
+    opacity: 0;
+}
+
+.home::before {
+    position: absolute;
+    transform: translate(34px, 7px);
+    content: '';
+    border-radius: 50px;
+    background-color: black;
+}
+
+.home:hover::before {
+    animation: onHoverSmoke 2s ease-in-out infinite normal backwards;
+}
+
+.home:hover::after {
+    animation: lightsUp 2s ease-in-out infinite normal backwards;
+}
+
+@keyframes lightsUp {
+    0% {
+        opacity: 0.4;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.4;
+    }
+}
+
+@keyframes onHoverSmoke {
+    0% {
+        transform: translate(34px, 7px);
+        padding: 0.2%;
+    }
+    30% {
+        padding: 0.2%;
+        transform: translate(37px, 0);
+    }
+    50% {
+        transform: translate(42px, -2px);
+    }
+    80% {
+        transform: translate(45px, -10px);
+    }
+    85% {
+        opacity: 0.3;
+    }
+    90% {
+        padding: 0;
+        transform: translate(34px, 7px);
+    }
+    100% {
+        opacity: 1;
+        padding: 0.2%;
+    }
+}
+
 .home:hover path {
-    fill: red;
-    transition: 0.2s;
+    transition: 0.4s ease-in-out;
 }
 
 .links {
+    display: flex;
+    flex-direction: row;
     margin: 1vh 2vw;
     font-size: clamp(1.2rem, 2.5vw, 2rem);
 }
 
 .link {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     padding: 0 1vw;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: bold;
-    transition: 0.2s;
 }
 
-.link:hover {
-    color: #f6f6f6;
-    text-shadow: 2px 0 0 Black, -2px 0 0 Black, 0 2px 0 Black, 0 -2px 0 Black, 1px 1px Black, -1px -1px 0 Black, 1px -1px 0 Black, -1px 1px 0 Black;
+.link::after {
+    content: '';
+    width: 0;
+    height: 2.5px;
+    background: #000;
+    transition: 0.2s ease-in-out;
+}
+
+.link:hover::after {
+    width: 80%;
 }
 
 @media (max-width:1024px) {
