@@ -8,11 +8,38 @@ import InstagramLogoActive from '../public/InstagramLogoActive'
 import LinkedinLogoActive from '../public/LinkedinLogoActive.js'
 import ResumeLogoActive from '../public/ResumeLogoActive'
 import FacebookLogoActive from '../public/FacebookLogoActive'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { mask, unMask } from 'remask'
 import Link from 'next/link'
 
 const ContactPage = () => {
+    const [submitStyle, setStyle] = useState(styles.inputButton);
+    const [submitText, setSubmitText] = useState("Enviar");
+    function buttonAnimationHandler() {
+        setTimeout(() => {
+            setStyle(styles.inputButtonClicked);
+        }, 100);
+        setTimeout(() => {
+            setSubmitText("Enviou!");
+        }, 1100);
+        setTimeout(() => {
+            setStyle(styles.inputButton);
+            setSubmitText("Enviar");
+        }, 3900);
+    }
+    async function handleOnSubmit(ev) {
+        ev.preventDefault();
+        const formData = {};
+        Array.from(ev.currentTarget.elements).forEach(field => {
+            if (!field.name) return;
+            formData[field.name] = field.value;
+        });
+        fetch('/api/mail', {
+            method: 'post',
+            body: JSON.stringify(formData)
+        })
+        buttonAnimationHandler();
+    }
     const [maskedValue, setMaskedValue] = useState("");
     function numberMask(ev) {
         const originalValue = unMask(ev.target.value);
@@ -37,11 +64,11 @@ const ContactPage = () => {
                 <div className={styles.mailSenderWrapper}>
                     <h1 className={styles.title}>Entre em Contato</h1>
                     <div className={styles.formsContent}>
-                        <form className={styles.form}>
+                        <form className={styles.form} method="post" onSubmit={handleOnSubmit}>
                             <div className={styles.inputRows}>
                                 <fieldset className={styles.fieldset}>
                                     <legend align="right" className={styles.legend}>Nome</legend>
-                                    <input className={styles.input} type="text" name="firstName" placeholder="Seu Nome" autoComplete="off" required />
+                                    <input className={styles.input} type="text" name="name" placeholder="Seu Nome" autoComplete="off" required />
                                 </fieldset>
                                 <fieldset className={styles.fieldset}>
                                     <legend align="right" className={styles.legend}>Último Nome</legend>
@@ -55,18 +82,20 @@ const ContactPage = () => {
                                 </fieldset>
                                 <fieldset className={styles.fieldset}>
                                     <legend align="right" className={styles.legend}>Telefone</legend>
-                                    <input className={styles.input} type="text" name="phoneNumber" onChange={numberMask} value={maskedValue} minlenght="14" placeholder="(__)_____-____" autoComplete="off" required />
+                                    <input className={styles.input} type="text" name="phoneNumber" onChange={numberMask} value={maskedValue} minLenght="3" placeholder="(__)_____-____" autoComplete="off" required />
                                 </fieldset>
                             </div>
                             <div className={styles.inputRows}>
                                 <fieldset className={styles.fieldset}>
                                     <legend align="right" className={styles.legend}>Mensagem</legend>
-                                    <textarea className={styles.input} type="text" onChange={recalculate} name="message" maxLength="320" placeholder="Diga me o que pensa!" autoComplete="off" />
+                                    <textarea className={styles.input} type="text" onChange={recalculate} name="message" maxLength="320" placeholder="Diga me o que pensa!" autoComplete="off" required/>
                                     <span className={styles.counter} id="counter">{countedValue} / 320</span>
                                 </fieldset>
                             </div>
                             <div className={styles.inputRows}>
-                                <input type="submit" className={styles.inputButton} value="Enviar" />
+                                <div className={styles.centerButton}>
+                                    <input type="submit" href={this} className={submitStyle} value={submitText} />
+                                </div>
                             </div>
                         </form>
                     </div>

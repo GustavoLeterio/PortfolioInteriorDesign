@@ -10,26 +10,27 @@
 }
 
 .home {
+    width: 50px;
     margin: 1vh 2vw;
+}
+
+.home::before {
+    position: absolute;
+    transform: translate(33px, 1px);
+    content: '';
+    border-radius: 50px;
+    background-color: black;
 }
 
 .home::after {
     z-index: -1;
     position: absolute;
-    transform: translate(-35px, 32px);
-    padding: 10px;
+    transform: translate(-40px, 32px);
+    padding: 15px;
     filter: blur(5px);
     content: '';
-    background-color: yellow;
+    background: radial-gradient(circle, rgba(255, 106, 0, 1) 0%, rgba(241, 255, 0, 1) 40%);
     opacity: 0;
-}
-
-.home::before {
-    position: absolute;
-    transform: translate(34px, 7px);
-    content: '';
-    border-radius: 50px;
-    background-color: black;
 }
 
 .home:hover::before {
@@ -38,46 +39,6 @@
 
 .home:hover::after {
     animation: lightsUp 2s ease-in-out infinite normal backwards;
-}
-
-@keyframes lightsUp {
-    0% {
-        opacity: 0.4;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0.4;
-    }
-}
-
-@keyframes onHoverSmoke {
-    0% {
-        transform: translate(34px, 7px);
-        padding: 0.2%;
-    }
-    30% {
-        padding: 0.2%;
-        transform: translate(37px, 0);
-    }
-    50% {
-        transform: translate(42px, -2px);
-    }
-    80% {
-        transform: translate(45px, -10px);
-    }
-    85% {
-        opacity: 0.3;
-    }
-    90% {
-        padding: 0;
-        transform: translate(34px, 7px);
-    }
-    100% {
-        opacity: 1;
-        padding: 0.2%;
-    }
 }
 
 .home:hover path {
@@ -104,6 +65,7 @@
     content: '';
     width: 0;
     height: 2.5px;
+    border-radius: 50px;
     background: #000;
     transition: 0.2s ease-in-out;
 }
@@ -113,13 +75,146 @@
 }
 
 @media (max-width:1024px) {
+    .home {
+        width: 70px;
+    }
+    .home:hover::before {
+        animation: res1024Smoke 2s ease-in-out infinite normal backwards;
+    }
     .link {
         font-size: clamp(2.2rem, 4vw, 2.8rem);
     }
+    .home::after {
+        padding: 22px;
+        background: radial-gradient(circle, rgba(255, 106, 0, 1) 0%, rgba(241, 255, 0, 1) 40%);
+        transform: translate(-55px, 45px);
+    }
 }
 
-@media (max-width:767px) {
+@media (max-width:768px) {
     .link {
-        font-size: clamp(1.2rem, 2.5vw, 2rem);
+        font-size: clamp(1.4rem, 2.5vw, 2rem);
+    }
+    .home {
+        width: 40px;
+    }
+    .home:hover::before {
+        animation: res768Smoke 2s ease-in-out infinite normal backwards;
+    }
+    .home::after {
+        padding: 10px;
+        background: radial-gradient(circle, rgba(255, 106, 0, 1) 0%, rgba(241, 255, 0, 1) 50%);
+        transform: translate(-30px, 32px);
+    }
+}
+
+@keyframes lightsUp {
+    0% {
+        opacity: 0.4;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.4;
+    }
+}
+
+@keyframes onHoverSmoke {
+    0% {
+        padding: 0;
+        transform: translate(39px, 5px);
+    }
+    20% {
+        padding: 3px;
+        opacity: 1;
+        transform: translate(39px, 2px);
+    }
+    30% {
+        padding: 3px;
+        transform: translate(43px, 0);
+    }
+    50% {
+        transform: translate(50px, -2px);
+    }
+    80% {
+        transform: translate(55px, -10px);
+    }
+    85% {
+        opacity: 0.3;
+    }
+    90% {
+        padding: 0;
+        transform: translate(37px, 5px);
+    }
+    100% {
+        opacity: 0;
+        padding: 0.2%;
+    }
+}
+
+@keyframes res1024Smoke {
+    0% {
+        padding: 0;
+        transform: translate(55px, 10px);
+    }
+    20% {
+        padding: 5px;
+        opacity: 1;
+        transform: translate(55px, 2px);
+    }
+    30% {
+        padding: 3px;
+        transform: translate(57px, 0);
+    }
+    50% {
+        transform: translate(63px, -2px);
+    }
+    80% {
+        transform: translate(70px, -10px);
+    }
+    85% {
+        opacity: 0;
+    }
+    90% {
+        padding: 2px;
+        transform: translate(37px, 5px);
+    }
+    100% {
+        opacity: 0;
+        padding: 5px;
+    }
+}
+
+@keyframes res768Smoke {
+    0% {
+        padding: 0;
+        transform: translate(29px, 7px);
+    }
+    20% {
+        padding:3px;
+        opacity: 1;
+        transform: translate(33px, 2px);
+    }
+    30% {
+        padding: 3px;
+        transform: translate(37px, 0);
+    }
+    50% {
+        transform: translate(42px, -2px);
+    }
+    80% {
+        transform: translate(47px, -10px);
+    }
+    85% {
+        opacity: 0;
+    }
+    90% {
+        padding: 3px;
+        transform: translate(29px, 7px);
+    }
+    100% {
+        opacity: 0;
+        padding: 3px;
     }
 }

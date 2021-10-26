@@ -15,7 +15,7 @@ export default function LandingPage() {
     });
     return (
         <div className={styles.landingPage} id="top">
-            <div className={styles.backgroundImage}><Image src="https://res.cloudinary.com/djf0isef7/image/upload/v1635020544/public/landPageBackground_ue1isb.jpg" layout="fill" objectFit="cover" objectPosition="center" /></div>
+            <div className={styles.backgroundImage}><Image src="https://res.cloudinary.com/djf0isef7/image/upload/v1635286075/public/landPageBackground_cmzyrc.jpg" layout="fill" objectFit="cover" /></div>
             <div className={fadeWrapperTitleProp.fade}>
                 <h1 className={styles.title}>
                     Design de Interiores

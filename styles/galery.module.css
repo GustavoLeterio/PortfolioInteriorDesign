@@ -117,7 +117,7 @@
 
 .link {
     display: none;
-    font-size: 1.5vw;
+    font-size: 1.7vw;
     color: white;
     font-weight: bold;
     background-color: #3C3C3C;
@@ -136,7 +136,7 @@
 }
 
 .name {
-    font-size: 1.85vw;
+    font-size: 2.2vw;
     font-weight: bold;
     color: white;
     z-index: 1;
