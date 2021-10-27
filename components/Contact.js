@@ -8,11 +8,12 @@ import InstagramLogoActive from '../public/InstagramLogoActive'
 import LinkedinLogoActive from '../public/LinkedinLogoActive.js'
 import ResumeLogoActive from '../public/ResumeLogoActive'
 import FacebookLogoActive from '../public/FacebookLogoActive'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { mask, unMask } from 'remask'
 import Link from 'next/link'
 
 const ContactPage = () => {
+
     const [submitStyle, setStyle] = useState(styles.inputButton);
     const [submitText, setSubmitText] = useState("Enviar");
     function buttonAnimationHandler() {
@@ -27,25 +28,31 @@ const ContactPage = () => {
             setSubmitText("Enviar");
         }, 3900);
     }
-    async function handleOnSubmit(ev) {
-        ev.preventDefault();
+
+    async function handleOnSubmit(e) {
+        e.preventDefault();
+
         const formData = {};
-        Array.from(ev.currentTarget.elements).forEach(field => {
+
+        Array.from(e.currentTarget.elements).forEach(field => {
             if (!field.name) return;
             formData[field.name] = field.value;
         });
-        fetch('/api/mail', {
-            method: 'post',
+
+        await fetch('/api/mail', {
+            method: 'POST',
             body: JSON.stringify(formData)
-        })
+        });
         buttonAnimationHandler();
     }
+
     const [maskedValue, setMaskedValue] = useState("");
     function numberMask(ev) {
         const originalValue = unMask(ev.target.value);
         const maskedValue = mask(originalValue, ['(99)99999-9999']);
         setMaskedValue(maskedValue);
     }
+
     const [countedValue, setCount] = useState("0");
     function recalculate(ev) {
         let textAreaCount = ev.target.value.length;
@@ -88,7 +95,7 @@ const ContactPage = () => {
                             <div className={styles.inputRows}>
                                 <fieldset className={styles.fieldset}>
                                     <legend align="right" className={styles.legend}>Mensagem</legend>
-                                    <textarea className={styles.input} type="text" onChange={recalculate} name="message" maxLength="320" placeholder="Diga me o que pensa!" autoComplete="off" required/>
+                                    <textarea className={styles.input} type="text" onChange={recalculate} name="message" maxLength="320" placeholder="Diga me o que pensa!" autoComplete="off" required />
                                     <span className={styles.counter} id="counter">{countedValue} / 320</span>
                                 </fieldset>
                             </div>
