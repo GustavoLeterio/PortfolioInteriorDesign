@@ -12,7 +12,7 @@ export default (req, res) => {
     Message: ${body.message}
   `;
 
-  await mail.send({
+  mail.send({
     to: 'juliacostadesigndeinteriores@gmail.com',
     from: 'juliacostadesigndeinteriores@gmail.com',
     subject: 'Entraram em contato meu amor! ❤️ ❤️ ❤️',
