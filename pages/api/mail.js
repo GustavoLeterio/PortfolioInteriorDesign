@@ -11,10 +11,10 @@ export default (req, res) => {
     const body = JSON.parse(req.body);
 
     const message = `
-    Name: ${body.name} ${body.lastName}\r\n
+    Nome: ${body.name} ${body.lastName}\r\n
     Email: ${body.email}\r\n
-    Email: ${body.phoneNumber}\r\n
-    Message: ${body.message}
+    Telefone: ${body.phoneNumber}\r\n
+    Mensagem: ${body.message}
   `;
 
     mail.send({
@@ -23,10 +23,13 @@ export default (req, res) => {
       subject: 'Entraram em contato meu amor! ❤️ ❤️ ❤️',
       text: message,
       html: message.replace(/\r\n/g, '<br>'),
-    });
+    }).then((response) => {
+      console.log(response[0].statusCode)
+      console.log(response[0].headers)
+    })
   }
   catch (e) {
-    console.log('teste')
+    console.log('e', e)
   }
   res.status(200).json({ status: 'ok' });
 }

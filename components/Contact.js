@@ -30,7 +30,6 @@ const ContactPage = () => {
     }
 
     async function handleOnSubmit(e) {
-        buttonAnimationHandler();
         e.preventDefault();
 
         const formData = {};
