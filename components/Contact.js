@@ -30,6 +30,7 @@ const ContactPage = () => {
     }
 
     async function handleOnSubmit(e) {
+        buttonAnimationHandler();
         e.preventDefault();
 
         const formData = {};
@@ -43,7 +44,6 @@ const ContactPage = () => {
             method: 'POST',
             body: JSON.stringify(formData)
         });
-        buttonAnimationHandler();
     }
 
     const [maskedValue, setMaskedValue] = useState("");
