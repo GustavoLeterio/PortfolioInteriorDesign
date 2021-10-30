@@ -23,10 +23,13 @@ export default (req, res) => {
       subject: 'Entraram em contato meu amor! ❤️ ❤️ ❤️',
       text: message,
       html: message.replace(/\r\n/g, '<br>'),
-    });
+    }).then((response) => {
+      console.log(response[0].statusCode)
+      console.log(response[0].headers)
+    })
   }
   catch (e) {
-    console.log('e',e)
+    console.error(error)
   }
   res.status(200).json({ status: 'ok' });
 }
