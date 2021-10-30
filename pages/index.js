@@ -64,7 +64,7 @@ export const getStaticProps = async () => {
       {
         id: 1,
         name: "Clínica",
-        image: "https://res.cloudinary.com/djf0isef7/image/upload/v1634427119/03_fx3hs8.jpg",
+        image: "https://res.cloudinary.com/djf0isef7/image/upload/v1635023155/public/RENDERS/PROJETO%20OFT/Cl%C3%ADnica/3_p9baqs.jpg",
       }
     ],
     ptg: [

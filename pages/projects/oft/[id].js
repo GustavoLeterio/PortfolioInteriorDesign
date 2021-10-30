@@ -10,19 +10,19 @@ const datas = [
         images: [
             {
                 id: 1,
-                image: "https://res.cloudinary.com/djf0isef7/image/upload/v1635023149/public/RENDERS/PROJETO%20OFT/ESCRIT%C3%93RIO/1_sdsyu2.jpg",
+                image: "https://res.cloudinary.com/djf0isef7/image/upload/v1635023149/public/RENDERS/PROJETO%20OFT/Cl%C3%ADnica/1_sdsyu2.jpg",
             },
             {
                 id: 2,
-                image: "https://res.cloudinary.com/djf0isef7/image/upload/v1635023155/public/RENDERS/PROJETO%20OFT/ESCRIT%C3%93RIO/2_se2aab.jpg",
+                image: "https://res.cloudinary.com/djf0isef7/image/upload/v1635023155/public/RENDERS/PROJETO%20OFT/Cl%C3%ADnica/2_se2aab.jpg",
             },
             {
                 id: 3,
-                image: "https://res.cloudinary.com/djf0isef7/image/upload/v1635023155/public/RENDERS/PROJETO%20OFT/ESCRIT%C3%93RIO/3_p9baqs.jpg"
+                image: "https://res.cloudinary.com/djf0isef7/image/upload/v1635023155/public/RENDERS/PROJETO%20OFT/Cl%C3%ADnica/3_p9baqs.jpg"
             },
             {
                 id: 4,
-                image: "https://res.cloudinary.com/djf0isef7/image/upload/v1635023158/public/RENDERS/PROJETO%20OFT/ESCRIT%C3%93RIO/4_sddylw.jpg",
+                image: "https://res.cloudinary.com/djf0isef7/image/upload/v1635023158/public/RENDERS/PROJETO%20OFT/Cl%C3%ADnica/4_sddylw.jpg",
             }
         ]
     }
