@@ -18,12 +18,13 @@ export default (req, res) => {
     text: message,
     html: message.replace(/\r\n/g, '<br>'),
   }
-  mail.send(data).then((response) => {
-    console.log("cara foi vei");
-  })
-    .catch((error) => {
-      console.log(error);
-    });
-
+  for (let x = 0; x<=3; x++) {
+    mail.send(data).then((response) => {
+      console.log("cara foi vei");
+    })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
   res.status(200).json({ status: 'ok' });
 }
