@@ -39,10 +39,14 @@ const ContactPage = () => {
             formData[field.name] = field.value;
         });
 
-        await fetch('/api/mail', {
-            method: 'POST',
-            body: JSON.stringify(formData)
-        });
+        try {
+            await fetch('/api/mail', {
+                method: 'POST',
+                body: JSON.stringify(formData)
+            });
+        } catch (e) {
+            console.log('e', e)
+        }
     }
 
     const [maskedValue, setMaskedValue] = useState("");
