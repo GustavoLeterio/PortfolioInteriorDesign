@@ -18,7 +18,7 @@ export default (req, res) => {
     text: message,
     html: message.replace(/\r\n/g, '<br>'),
   }
-  for (let x = 0; x<=3; x++) {
+  for (let x = 0; x<=2; x++) {
     mail.send(data).then((response) => {
       console.log("cara foi vei");
     })
