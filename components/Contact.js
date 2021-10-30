@@ -45,7 +45,7 @@ const ContactPage = () => {
                 body: JSON.stringify(formData)
             });
         } catch (e) {
-            console.log('e', e)
+            console.log('e', e);
         }
     }
 
