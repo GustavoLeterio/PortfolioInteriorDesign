@@ -22,11 +22,11 @@
     padding: 2vh 0;
 }
 
-.line:hover .leftArrow, .line:hover .rightArrow {
+.line:hover .arrow, .line:hover .arrow {
     opacity: 1;
 }
 
-.leftArrow, .rightArrow {
+.arrow {
     opacity: 0;
     z-index: 1;
     position: relative;
@@ -42,15 +42,9 @@
     transition: 0.1s ease-in-out;
 }
 
-.leftArrow:hover {
+.arrow:hover {
     font-size: clamp(1.5rem, 5vw, 5rem);
     text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 0.5vw 1px black, -1px -1px 0 black, 0.5vw -1px 0 black, -1px 1px 0 black;
-    color: white;
-}
-
-.rightArrow:hover {
-    font-size: clamp(1.5rem, 6vw, 5rem);
-    text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -0.5vw -1px 0 black, 1px -1px 0 black, -0.5vw 1px 0 black;
     color: white;
 }
 
@@ -136,7 +130,7 @@
 }
 
 .name {
-    font-size: 2.2vw;
+    font-size: 2vw;
     font-weight: bold;
     color: white;
     z-index: 1;
@@ -153,9 +147,6 @@
 @media (max-width:1024px) {
     .categoryWrapper {
         min-height: 27vh;
-    }
-    .leftArrow, .rightArrow {
-        display: none;
     }
     .title {
         margin: 0 0 0 7vw;
@@ -181,30 +172,6 @@
     .imageBox:hover {
         min-width: 50vw;
         height: 25vw;
-    }
-    .leftArrow, .rightArrow {
-        width: 6vw;
-        height: 28vw;
-        transition: 0.1s;
-        font-size: clamp(2rem, 8vw, 4rem);
-    }
-    .leftArrow:hover, .rightArrow:hover {
-        text-shadow: none;
-        font-size: clamp(2rem, 8vw, 4rem);
-        color: black;
-        display: inline;
-    }
-    .leftArrow:active {
-        font-size: clamp(2rem, 10vw, 4.5rem);
-        text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 0.5vw 1px black, -1px -1px 0 black, 0.5vw -1px 0 black, -1px 1px 0 black;
-        color: white;
-        display: inline;
-    }
-    .rightArrow:active {
-        font-size: clamp(2rem, 10vw, 4.5rem);
-        text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -0.5vw -1px 0 black, 1px -1px 0 black, -0.5vw 1px 0 black;
-        color: white;
-        display: inline;
     }
     .linkContent {
         transform: translateY(0) !important;
@@ -240,9 +207,6 @@
     .imageBox:hover {
         min-width: 85vw;
         height: 45vw;
-    }
-    .leftArrow, .rightArrow {
-        height: 51vw;
     }
     .linkContent {
         transform: translateY(-67%);

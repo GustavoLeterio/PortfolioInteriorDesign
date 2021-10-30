@@ -1,0 +1,104 @@
+.projectPage:global(.projectPage) {
+    width: 100vw;
+    height: 100vh;
+    padding-top: calc(1.5vh + 55px);
+    scroll-behavior:auto !important;
+}
+
+.slider {
+    height: 93vh;
+    overflow: hidden;
+}
+
+.imageBox {
+    width: 100vw;
+    height: 93vh;
+    overflow: hidden;
+}
+
+.imageBox div img {
+    width: 100vw;
+    height: 93vh;
+}
+
+.arrow {
+    opacity: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    padding: 0 4vw 0 2vw;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
+    z-index: 1;
+    font-size: clamp(2rem, 4vw, 4rem);
+    font-family: 'Sofia', cursive;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.arrow:nth-last-child(2) {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
+    position: relative;
+    float: right;
+    transform: translateY(-100%);
+}
+
+.arrow:hover {
+    opacity: 1 !important;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.arrow:nth-last-child(2):hover {
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.slider:hover .arrow {
+    opacity: 0.5;
+}
+
+.button__bar {
+    position: relative;
+    float: right;
+    margin: 0 auto;
+    text-align: center;
+    padding: 4vh 0 5vh 0;
+    width: 100%;
+    transform: translateY(-9vh);
+    background: radial-gradient(closest-side at 50% 50%, rgba(0, 0, 0, 0.25)20%, rgba(0, 0, 0, 0)80%);
+    position: absolute;
+    transition: 0.2s ease-in-out;
+}
+
+.button__bar li {
+    color: transparent;
+    display: inline-block;
+    padding: 0;
+}
+
+.button__bar li button {
+    background: #F6F6F6;
+    cursor: pointer;
+    display: block;
+    overflow: hidden;
+    margin: 5px;
+    height: 4px;
+    width: 30px;
+    opacity: 0.5;
+    transition: 0.1s ease-in-out;
+}
+
+.button__bar li button:hover {
+    opacity: 1;
+    background: white;
+    box-shadow: 0 0 2px 0 black;
+}
+
+.button__bar :global(li.slick-active) button {
+    opacity: 1;
+    background: #F6F6F6;
+    box-shadow: 0 0 2px 0 #f6f6f69b;
+}

@@ -10,9 +10,11 @@
   },
   "dependencies": {
     "@sendgrid/mail": "^7.5.0",
+    "framer-motion": "^5.0.0",
     "next": "^11.1.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-scroll": "^1.8.4",
     "react-slick": "^0.28.1",
     "remask": "0.1.0-alpha.5",
     "slick-carousel": "^1.8.1",
