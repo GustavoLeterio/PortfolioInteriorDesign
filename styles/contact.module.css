@@ -117,7 +117,7 @@
     animation: clickedAnimationEnd 1s ease-in-out 0s 1;
 }
 
-.inputButtonClicked {
+.inputButtonClickedSent {
     background-color: transparent;
     font-weight: bold;
     color: #212121;
@@ -125,9 +125,18 @@
     height: 100%;
     box-shadow: inset 0 0 0 2px #212121;
     border-radius: 5px;
-    animation: clickedAnimation 4s ease-in-out 0s 1;
+    animation: clickedAnimationSent 4s ease-in-out 0s 1;
 }
-
+.inputButtonClickedError {
+    background-color: transparent;
+    font-weight: bold;
+    color: #212121;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 0 2px #212121;
+    border-radius: 5px;
+    animation: clickedAnimationError 4s ease-in-out 0s 1;
+}
 .inputButton:hover {
     color: #212121;
     box-shadow: inset 0 0 0 2px #212121;
@@ -324,7 +333,7 @@
     }
 }
 
-@keyframes clickedAnimation {
+@keyframes clickedAnimationSent {
     0% {
         width: 100%;
     }
@@ -347,6 +356,38 @@
     80% {
         box-shadow: inset 0 0 0 2px #2AA815;
         color: #38CA21;
+        background-color: #F6F6F6;
+    }
+    95% {
+        background-color: #212121;
+        color: #212121;
+        box-shadow: none;
+    }
+}
+
+@keyframes clickedAnimationError {
+    0% {
+        width: 100%;
+    }
+    10% {
+        color: transparent;
+    }
+    15% {
+        width: 2%;
+        background-color: #F6F6F6;
+    }
+    25% {
+        color: transparent;
+    }
+    40% {
+        box-shadow: inset 0 0 0 2px #bd3939;
+        color: #bd3939;
+        width: 100%;
+        background-color: #F6F6F6;
+    }
+    80% {
+        box-shadow: inset 0 0 0 2px #bd3939;
+        color: #bd3939;
         background-color: #F6F6F6;
     }
     95% {

@@ -16,9 +16,9 @@ const ContactPage = () => {
 
     const [submitStyle, setStyle] = useState(styles.inputButton);
     const [submitText, setSubmitText] = useState("Enviar");
-    function buttonAnimationHandler() {
+    function buttonAnimationHandlerSent() {
         setTimeout(() => {
-            setStyle(styles.inputButtonClicked);
+            setStyle(styles.inputButtonClickedSent);
         }, 100);
         setTimeout(() => {
             setSubmitText("Enviou!");
@@ -28,8 +28,20 @@ const ContactPage = () => {
             setSubmitText("Enviar");
         }, 3900);
     }
-
+    function buttonAnimationHandlerError() {
+        setTimeout(() => {
+            setStyle(styles.inputButtonClickedError);
+        }, 100);
+        setTimeout(() => {
+            setSubmitText("Erro!");
+        }, 1100);
+        setTimeout(() => {
+            setStyle(styles.inputButton);
+            setSubmitText("Enviar");
+        }, 3900);
+    }
     async function handleOnSubmit(e) {
+
         e.preventDefault();
 
         const formData = {};
@@ -39,11 +51,16 @@ const ContactPage = () => {
             formData[field.name] = field.value;
         });
 
-        await fetch('/api/mail', {
+        fetch('/api/mail', {
             method: 'POST',
             body: JSON.stringify(formData)
+        }).then(() => {
+            buttonAnimationHandlerSent();
+        })
+        .catch((error) => {
+            buttonAnimationHandlerError();
+            console.log(error);
         });
-        buttonAnimationHandler();
     }
 
     const [maskedValue, setMaskedValue] = useState("");
