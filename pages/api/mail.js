@@ -2,7 +2,7 @@ const mail = require('@sendgrid/mail');
 
 mail.setApiKey(process.env.SENDGRID_API_KEY);
 
-export default async(req, res) => {
+export default async (req, res) => {
   const body = JSON.parse(req.body);
 
   const message = `
@@ -18,15 +18,12 @@ export default async(req, res) => {
     text: message,
     html: message.replace(/\r\n/g, '<br>'),
   }
-  for (let x = 0; x <= 2; x++) {
-    setTimeout(() => {
-      mail.send(data).then((response) => {
-        console.log("cara foi vei");
-      })
-        .catch((error) => {
-          console.log(error);
-        });
-     }, 500);
-  }
+  await mail.send(data).then((response) => {
+    console.log("cara foi vei");
+  })
+    .catch((error) => {
+      console.log(error);
+    });
+
   res.status(200).json({ status: 'ok' });
 }
