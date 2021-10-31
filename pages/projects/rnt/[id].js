@@ -197,7 +197,7 @@ export default function Projects({ datas }) {
                     </div>
                 ))}
             </Slider>
-                <About/>
+            <About />
         </div>
     )
 }
