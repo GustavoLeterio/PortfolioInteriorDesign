@@ -3,7 +3,7 @@ import Image from 'next/image';
 import styles from '/styles/project.module.css';
 import { useEffect } from 'react';
 import About from '/components/About'
-import { datas } from '/db'
+import { datas } from '/projectsdb'
 
 export const getStaticPaths = async () => {
     const paths = Object.values(datas.ecrt).map(mod => {
