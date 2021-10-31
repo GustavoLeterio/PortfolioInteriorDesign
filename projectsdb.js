@@ -1,4 +1,4 @@
-export const datas = {
+export async const datas = {
     rnt: [
         {
             id: 1,
