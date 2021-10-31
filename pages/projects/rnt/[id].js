@@ -2,7 +2,7 @@ import Slider from 'react-slick';
 import Image from 'next/image';
 import styles from '/styles/project.module.css';
 import { useEffect } from 'react';
-
+import About from '/components/About'
 const datas = [
     {
         id: 1,
@@ -188,17 +188,16 @@ export default function Projects({ datas }) {
     return (
 
         <div className={styles.projectPage} id="page">
-            <div className={styles.pageContent}>
-                <Slider className={styles.slider} {...settings}>
-                    {datas.map((mod) => Object.values(mod.images).map((images) =>
-                        <div className={styles.imageBox} key={images.id}>
+            <Slider className={styles.slider} {...settings} >
+                {datas.map((mod) => Object.values(mod.images).map((images) =>
+                    <div className={styles.imageContent} key={images.id}>
+                        <div className={styles.imageBox} >
                             <Image src={images.image} quality={100} width={1920} height={1080} lazy={false} />
                         </div>
-                    ))}
-                </Slider>
-                <h1 style={{ fontSize: "10vw" }}>
-                </h1>
-            </div>
+                    </div>
+                ))}
+            </Slider>
+                <About/>
         </div>
     )
 }

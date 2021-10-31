@@ -18,12 +18,5 @@ export default async (req, res) => {
     text: message,
     html: message.replace(/\r\n/g, '<br>'),
   }
-  await mail.send(data).then((response) => {
-    console.log("cara foi vei");
-  })
-    .catch((error) => {
-      console.log(error);
-    });
-
-  res.status(200).json({ status: 'ok' });
+  await mail.send(data).then((response) => { console.log(response); }).catch((error) => { console.log(error); });
 }

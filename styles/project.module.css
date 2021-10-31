@@ -1,24 +1,25 @@
 .projectPage:global(.projectPage) {
     width: 100vw;
     height: 100vh;
-    padding-top: calc(1.5vh + 55px);
-    scroll-behavior:auto !important;
+
 }
 
 .slider {
-    height: 93vh;
+    margin-top: calc(1.5vh + 55px);
+    width: 100vw;
+    height: 86vh;
     overflow: hidden;
 }
 
 .imageBox {
     width: 100vw;
-    height: 93vh;
+    height: 86vh;
     overflow: hidden;
 }
 
 .imageBox div img {
     width: 100vw;
-    height: 93vh;
+    height: 86vh;
 }
 
 .arrow {
@@ -101,4 +102,48 @@
     opacity: 1;
     background: #F6F6F6;
     box-shadow: 0 0 2px 0 #f6f6f69b;
+}
+
+@media (max-width:1024px) {
+    .slider {
+        width: 100vw;
+        height: 50vh;
+        overflow: hidden;
+    }
+    .imageBox {
+        vertical-align: middle;
+        width: 100vw;
+        height: 50vh;
+        overflow: hidden;
+    }
+    .imageBox div img {
+        vertical-align: middle;
+        width: 100vw;
+        height: 50vh;
+    }
+    .arrow:nth-last-child(2) {
+        transform: translateY(-100%);
+    }
+}
+
+@media (max-width:768px) {
+    .slider {
+        width: 100vw;
+        height: 30vh;
+        overflow: hidden;
+    }
+    .imageBox {
+        vertical-align: middle;
+        width: 100vw;
+        height: 30vh;
+        overflow: hidden;
+    }
+    .imageBox div img {
+        vertical-align: middle;
+        width: 100vw;
+        height: 30vh;
+    }
+    .arrow:nth-last-child(2) {
+        transform: translateY(-100%);
+    }
 }
