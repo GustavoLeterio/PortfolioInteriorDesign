@@ -80,7 +80,7 @@ export default function Projects({ datas }) {
         <div className={styles.projectPage} id="page">
             <Slider className={styles.slider} {...settings} >
                 {datas.map((mod) => Object.values(mod.images).map((images) =>
-                    <div className={styles.imageBox} >
+                    <div className={styles.imageBox} key={images.id}>
                         <Image src={images.image} quality={100} width={1920} height={1080} lazy={false} />
                     </div>
                 ))}
