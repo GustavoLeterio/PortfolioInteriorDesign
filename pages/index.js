@@ -1,8 +1,8 @@
-import { React, useEffect } from 'react';
+import { React } from 'react';
 import Slider from 'react-slick';
 import Head from 'next/head'
 import LandingPage from '../components/LandingPage'
-import About from '../components/About'
+import TextAndImage from '../components/TextAndImage'
 import styles from '../styles/galery.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -41,7 +41,7 @@ export default function Home({ datas }) {
       nextArrow: settingCustomizer(<SampleArrow content="&#10095;" />, false),
       responsive: [
         {
-          breakpoint: 1024,
+          breakpoint: 1025,
           settings: {
             draggable: true,
             slidesToShow: settingCustomizer(2, false),
@@ -94,7 +94,7 @@ export default function Home({ datas }) {
       <div style={{ position: "relative", top: "-6vh" }} id="home" />
       <LandingPage />
       <div style={{ position: "relative", top: "-6vh" }} id="about" />
-      <About />
+      <TextAndImage image="https://res.cloudinary.com/djf0isef7/image/upload/v1635020544/public/aboutImage_dgza1m.png" width={849} height={999} cssArrangement={{ left: 0 }} imageSide="right" />
       <div style={{ position: "relative", top: "-6vh" }} id="projects" />
       <div className={styles.galeryPage}>
         <h1 className={styles.title}>Projetos</h1>

@@ -1,8 +1,8 @@
 import Slider from 'react-slick';
 import Image from 'next/image';
 import styles from '/styles/project.module.css';
-import { useEffect } from 'react';
-import About from '/components/About'
+import { useEffect, useState } from 'react';
+import TextAndImage from '/components/TextAndImage'
 import { datas } from '/projectsdb'
 
 export const getStaticPaths = async () => {
@@ -22,7 +22,30 @@ export const getStaticProps = async (context) => {
     }
 }
 
+function useWindowSize() {
+    const [windowSize, setWindowSize] = useState({
+        width: undefined,
+        height: undefined,
+    });
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            function handleResize() {
+                setWindowSize({
+                    width: window.innerWidth,
+                    height: window.innerHeight,
+                });
+            }
+            window.addEventListener("resize", handleResize);
+            handleResize();
+            return () => window.removeEventListener("resize", handleResize);
+        }
+    }, []);
+    return windowSize;
+}
+
 export default function Projects({ datas }) {
+    const size = useWindowSize();
     useEffect(() => {
         jumpToTop()
     })
@@ -57,7 +80,7 @@ export default function Projects({ datas }) {
         nextArrow: <SampleArrow content="&#10095;" />,
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 1025,
                 settings: {
                     prevArrow: false,
                     nextArrow: false,
@@ -74,7 +97,6 @@ export default function Projects({ datas }) {
             }
         ]
     };
-
     return (
 
         <div className={styles.projectPage} id="page">
@@ -86,7 +108,34 @@ export default function Projects({ datas }) {
                 ))}
             </Slider>
             <span className={styles.advise}><br />Para visualizar melhor, vire o celular!</span>
-            <About />
+            {datas.map((mod) => (<>
+                <TextAndImage
+                    image={(size.width > 1024) ? mod.descriptionImageOne : mod.descriptionImageOneMobile}
+                    cssArrangement={
+                        {
+                            padding: (size.width > 1024) ? "5vh 0 0 0" : "2vh 0",
+                            width: (size.width <= 1024) && (size.width > 768) ? "70vw" : (size.width <= 768) ? "80vw" : "",
+                            margin: (size.width <= 1024) ? "0 auto" : "0",
+                        }}
+                    width={(size.width <= 1024) ? 1164 : 848}
+                    height={885}
+                    title={mod.title}
+                    paragraphs={datas.map((data) => Object.values(data.paragraphs).map((mod) => mod))}
+                    imageSide="right" />
+                <TextAndImage
+                    image={(size.width > 1024) ? mod.descriptionImageTwo : mod.descriptionImageTwoMobile}
+                    cssArrangement={
+                        {
+                            right: (size.width > 1024) ? "1vw" : "0",
+                            padding: (size.width > 1024) ? "5vh 0 0 0" : "2vh 0",
+                            margin: (size.width <= 1024) ? "0 auto" : "0",
+                        }}
+                    width={849}
+                    height={885}
+                    title={mod.title}
+                    paragraphs={datas.map((data) => Object.values(data.paragraphs).map((mod) => mod))}
+                    imageSide="left" />
+            </>))}
         </div>
     )
 }

@@ -184,7 +184,7 @@
     }
 }
 
-@media (max-width:768px) and (orientation:landscape) {
+@media (max-width:1023px) and (orientation:landscape) {
     .slider {
         margin-top: 0;
         width: 100vw;
@@ -204,5 +204,8 @@
         padding: 15vh 0 23vh 0;
         transform: translateY(-25vh);
         background: radial-gradient(closest-side at 50% 50%, rgba(0, 0, 0, 0.4)20%, rgba(0, 0, 0, 0)80%);
+    }
+    .advise {
+        display: none;
     }
 }

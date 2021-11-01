@@ -8,8 +8,8 @@ export default async (req, res) => {
   const message = `
     Name: ${body.name} ${body.lastName}\r\n
     Email: ${body.email}\r\n
-    Email: ${body.phoneNumber}\r\n
-    Message: ${body.message}
+    Telefone: ${body.phoneNumber}\r\n
+    Mensagem: ${body.message}
   `;
   const data = {
     to: 'juliacostadesigndeinteriores@gmail.com',
