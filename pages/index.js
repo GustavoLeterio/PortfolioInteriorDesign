@@ -70,7 +70,7 @@ export default function Home({ datas }) {
             <>{
               <div className={styles.itemContent}>
                 <div className={styles.imageBox} key={mod.id}>
-                  <Image src={mod.image} width={400} height={200} layout="responsive" />
+                  <Image src={mod.image} blurDataURL={mod.image} placeholder="blur" width={400} height={200} layout="responsive" />
                   <div className={styles.linkContent}>
                     <span className={styles.name}>{mod.name}</span>
                     <Link href={'projects/' + path + '/' + mod.id} ><a className={styles.link} >Veja Mais!</a></Link>
