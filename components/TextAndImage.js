@@ -32,7 +32,13 @@ const TextAndImage = (props) => {
             {(size.width > 1024) && (props.imageSide == "left") ? <div className={styles.imageWrapper} style={props.cssArrangement}><Image src={props.image} quality={100} width={props.width} height={props.height} layout="responsive" /></div> : ''}
             <div className={styles.wrapperText}>
                 <h1 className={styles.title}>
-                    Sobre
+                    {
+                        (datas !== undefined) ?
+                            props.title 
+                            :
+                            "About"
+                    }
+
                 </h1>
                 {
                     (datas !== undefined) ?
@@ -47,7 +53,7 @@ const TextAndImage = (props) => {
                         (
                             <>
                                 <p className={styles.text}>
-                                    aa
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse fermentum erat id nunc bibendum dapibus. Donec nec lacus ut lectus mattis sodales. Etiam pellentesque ex mi, et cursus turpis pharetra eu. Donec porta dictum sapien a sagittis. Quisque nulla nisi, fermentum in tortor et, efficitur maximus erat. Donec elit leo, malesuada ut ipsum vel, pulvinar mollis purus. Nulla facilisi. Integer posuere iaculis mauris, nec faucibus nisl facilisis a. Quisque ullamcorper velit eget bibendum auctor. Ut hendrerit egestas lobortis. Maecenas ligula odio, interdum eget metus at, pellentesque laoreet nunc.
                                 </p>
                             </>
                         )

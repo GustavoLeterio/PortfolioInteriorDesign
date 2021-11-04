@@ -48,7 +48,6 @@
     width: 45vw;
     background-color: #F6F6F6;
     border-radius: 10px;
-    overflow: hidden;
 }
 
 .inputRows {
@@ -73,6 +72,7 @@
     border-radius: 0.3vw;
     color: #646464;
     padding: 3px 6px;
+    overflow: hidden;
 }
 
 .legend {
@@ -84,11 +84,14 @@
 .input {
     font-weight: 400;
     width: 100%;
-    height: 85%;
+    height: 100%;
     padding: 0 0 0 1%;
     font-size: 1.5vw;
     background-color: #F6F6F6;
     resize: none;
+}
+.input:nth-last-child(2){
+    height:85%;
 }
 .input::placeholder{
     color: #858585;
@@ -97,6 +100,7 @@
     float: right;
     transition: 0.2s;
     font-size: clamp(0.5rem, 2vw, 1.2rem);
+    position: sticky;
 }
 
 .centerButton {
@@ -190,15 +194,29 @@
     width: 7vw;
 }
 
-@media (max-width:1366px) {
+@media (max-width:1366px) and (min-width:1360px) {
     .title {
         font-size: 4.5vw;
+        padding: 1vh 1.5vw;
     }
     .mailSenderWrapper {
         width: 45vw;
     }
     .formsContent {
         width: 45vw;
+    }
+    .inputRows {
+        margin: 1.5vh 1.5vw;
+    }
+    .legend {
+        font-size: clamp(0.7rem, 1.6vw, 1.6rem);
+    }
+    
+    .input {
+        font-size: clamp(0.7rem, 1.6vw, 1.6rem);
+    }
+    .input:nth-last-child(2){
+        height:80%;
     }
     .svg svg {
         width: 7vw;
@@ -361,38 +379,6 @@
     80% {
         box-shadow: inset 0 0 0 2px #2AA815;
         color: #38CA21;
-        background-color: #F6F6F6;
-    }
-    95% {
-        background-color: #212121;
-        color: #212121;
-        box-shadow: none;
-    }
-}
-
-@keyframes clickedAnimationError {
-    0% {
-        width: 100%;
-    }
-    10% {
-        color: transparent;
-    }
-    15% {
-        width: 2%;
-        background-color: #F6F6F6;
-    }
-    25% {
-        color: transparent;
-    }
-    40% {
-        box-shadow: inset 0 0 0 2px #bd3939;
-        color: #bd3939;
-        width: 100%;
-        background-color: #F6F6F6;
-    }
-    80% {
-        box-shadow: inset 0 0 0 2px #bd3939;
-        color: #bd3939;
         background-color: #F6F6F6;
     }
     95% {

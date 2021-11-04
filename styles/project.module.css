@@ -74,7 +74,7 @@
 }
 
 .button__bar li {
-    color: transparent;
+    font-size: 0;
     display: inline-block;
     padding: 0;
 }
@@ -108,6 +108,33 @@
     font-family: 'Josefin Sans', sans-serif;
     color: #707070;
     font-size: 4vw;
+}
+
+@media (max-width:1366px) and (min-width:1360px) {
+    .slider {
+        margin-top: calc(1.5vh + 55px);
+        width: 100vw;
+        height: 83vh;
+        overflow: hidden;
+    }
+    .imageBox {
+        width: 100vw;
+        height: 83vh;
+        overflow: hidden;
+    }
+    .imageBox div img {
+        width: 100vw;
+        height: 83vh;
+    }
+    .arrow {
+        padding: 0 3vw 0 2vw;
+        font-size: clamp(2rem, 3.5vw, 4rem);
+    }
+    .button__bar {
+        padding: 4vh 0 8vh 0;
+        transform: translateY(-11vh);
+        background: radial-gradient(closest-side at 50% 50%, rgba(0, 0, 0, 0.3)20%, rgba(0, 0, 0, 0)90%);
+    }
 }
 
 @media (max-width:1024px) {

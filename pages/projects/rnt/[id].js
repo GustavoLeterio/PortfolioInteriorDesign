@@ -97,6 +97,7 @@ export default function Projects({ datas }) {
             }
         ]
     };
+
     return (
 
         <div className={styles.projectPage} id="page">
@@ -107,7 +108,7 @@ export default function Projects({ datas }) {
                     </div>
                 ))}
             </Slider>
-            <span className={styles.advise}><br />Para visualizar melhor, vire o celular!</span>
+            <span className={styles.advise}><br />For a better view, turn the phone over!</span>
             {datas.map((mod) => (<>
                 <TextAndImage
                     image={(size.width > 1024) ? mod.descriptionImageOne : mod.descriptionImageOneMobile}
@@ -132,7 +133,7 @@ export default function Projects({ datas }) {
                         }}
                     width={849}
                     height={885}
-                    title={mod.title}
+                    title={datas.map((data) => data.title)}
                     paragraphs={datas.map((data) => Object.values(data.paragraphs).map((mod) => mod))}
                     imageSide="left" />
             </>))}

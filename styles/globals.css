@@ -39,6 +39,8 @@ a {
 }
 
 * {
+  scrollbar-color: #6e6e6e transparent;
+  scrollbar-width: thin;
   border: 0;
   outline: 0;
   padding: 0;

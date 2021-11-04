@@ -73,7 +73,7 @@ export default function Home({ datas }) {
                   <Image src={mod.image} blurDataURL={mod.image} placeholder="blur" width={400} height={200} layout="responsive" />
                   <div className={styles.linkContent}>
                     <span className={styles.name}>{mod.name}</span>
-                    <Link href={'projects/' + path + '/' + mod.id} ><a className={styles.link} >Veja Mais!</a></Link>
+                    <Link href={'projects/' + path + '/' + mod.id + '#page'} ><a className={styles.link} >See More!</a></Link>
                   </div>
                 </div>
               </div>
@@ -86,10 +86,11 @@ export default function Home({ datas }) {
   return (
     <>
       <Head>
-        <title>Portfólio Julia Costa</title>
-        <meta name="description" content="Julia Costa Designer de Interiores" />
-        <meta name="keywords" content="Julia Costa, Designer de Interiores, Portfolio" />
+        <title>Julia Costa Portfolio</title>
+        <meta name="description" content="Julia Costa Interior Designer" />
+        <meta name="keywords" content="Julia Costa, Interior Designer, Portfolio" />
         <meta property="og:image" />
+        <link rel="icon" href="https://img.icons8.com/office/16/000000/design.png" type="image/x-icon" />
       </Head>
       <div style={{ position: "relative", top: "-6vh" }} id="home" />
       <LandingPage />
@@ -97,15 +98,15 @@ export default function Home({ datas }) {
       <TextAndImage image="https://res.cloudinary.com/djf0isef7/image/upload/v1635020544/public/aboutImage_dgza1m.png" width={849} height={999} cssArrangement={{ left: 0 }} imageSide="right" />
       <div style={{ position: "relative", top: "-6vh" }} id="projects" />
       <div className={styles.galeryPage}>
-        <h1 className={styles.title}>Projetos</h1>
+        <h1 className={styles.title}>Projects</h1>
         <div className={styles.galery}>
-          {lineOrganizer(datas.rnt, "rnt", "Projeto RNT")}
-          {lineOrganizer(datas.ecrt, "ecrt", "Projeto ECRT")}
-          {lineOrganizer(datas.esp, "esp", "Projeto ESP")}
-          {lineOrganizer(datas.fld, "fld", "Projeto FLD")}
-          {lineOrganizer(datas.isab, "isab", "Projeto ISAB")}
-          {lineOrganizer(datas.oft, "oft", "Projeto OFT")}
-          {lineOrganizer(datas.ptg, "ptg", "Projeto PTG")}
+          {lineOrganizer(datas.rnt, "rnt", "Project RNT")}
+          {lineOrganizer(datas.ecrt, "ecrt", "Project ECRT")}
+          {lineOrganizer(datas.esp, "esp", "Project ESP")}
+          {lineOrganizer(datas.fld, "fld", "Project FLD")}
+          {lineOrganizer(datas.isab, "isab", "Project ISAB")}
+          {lineOrganizer(datas.oft, "oft", "Project OFT")}
+          {lineOrganizer(datas.ptg, "ptg", "Project PTG")}
         </div>
       </div>
       <div id="contact" />

@@ -1,7 +1,7 @@
 .landingPage {
     width: 100vw;
-    height: calc(100vh - (1.5vh + 55px));
-    padding-top: calc(1.5vh + 50px);
+    height: calc(100vh - (1.5vh));
+    padding-top: calc(1.5vh);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,7 +10,8 @@
 .backgroundImage {
     z-index: 0;
 }
-.backgroundImage div  {
+
+.backgroundImage div {
     width: 100%;
     height: 93%;
 }
@@ -26,6 +27,7 @@
     font-family: 'Josefin Sans', sans-serif;
     transition: 0.6s ease-in-out;
 }
+
 .wrapperFadeTitle {
     opacity: 0;
     font-weight: 600;
@@ -43,7 +45,28 @@
     line-height: 113%;
     opacity: 1;
 }
+
 .subtitle {
     font-size: clamp(0.5rem, 6vw, 4rem);
     font-weight: normal;
+}
+
+@media (max-width:1366px) and (min-width:1360px) {
+    .landingPage {
+        width: 100vw;
+    }
+    .backgroundImage div {
+        width: 100%;
+        height: 92%;
+    }
+    .title {
+        font-size: clamp(1rem, 6vw, 6rem);
+        font-weight: normal;
+        line-height: 113%;
+        opacity: 1;
+    }
+    .subtitle {
+        font-size: clamp(0.5rem, 4vw, 4rem);
+        font-weight: normal;
+    }
 }

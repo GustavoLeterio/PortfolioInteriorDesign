@@ -1,5 +1,5 @@
 import styles from '../styles/Navbar.module.css'
-import SVG from '../public/home.js'
+import Home from '../public/home.js'
 import LinkNext from 'next/link'
 import { Link } from 'react-scroll'
 import { useRouter } from "next/router";
@@ -16,15 +16,15 @@ const Navbar = () => {
                 <Link to="home" >
                     <LinkNext href="/">
                         <a>
-                            <SVG />
+                            <Home alt="home"/>
                         </a>
                     </LinkNext>
                 </Link>
             </div>
             <div className={styles.links}>
-                {linkHandler("about", "Sobre")}
-                {linkHandler("projects", "Projetos")}
-                {linkHandler("contact", "Contato")}
+                {linkHandler("about", "About")}
+                {linkHandler("projects", "Projects")}
+                {linkHandler("contact", "Contact")}
             </div>
         </nav>
     );

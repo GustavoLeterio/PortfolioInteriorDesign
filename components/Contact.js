@@ -15,29 +15,17 @@ import Link from 'next/link'
 const ContactPage = () => {
 
     const [submitStyle, setStyle] = useState(styles.inputButton);
-    const [submitText, setSubmitText] = useState("Enviar");
+    const [submitText, setSubmitText] = useState("Submit");
     function buttonAnimationHandlerSent() {
         setTimeout(() => {
             setStyle(styles.inputButtonClickedSent);
         }, 100);
         setTimeout(() => {
-            setSubmitText("Enviou!");
+            setSubmitText("Submited!");
         }, 1100);
         setTimeout(() => {
             setStyle(styles.inputButton);
-            setSubmitText("Enviar");
-        }, 3900);
-    }
-    function buttonAnimationHandlerError() {
-        setTimeout(() => {
-            setStyle(styles.inputButtonClickedError);
-        }, 100);
-        setTimeout(() => {
-            setSubmitText("Erro!");
-        }, 1100);
-        setTimeout(() => {
-            setStyle(styles.inputButton);
-            setSubmitText("Enviar");
+            setSubmitText("Submit");
         }, 3900);
     }
     async function handleOnSubmit(e) {
@@ -54,13 +42,9 @@ const ContactPage = () => {
         fetch('/api/mail', {
             method: 'POST',
             body: JSON.stringify(formData)
-        }).then(() => {
-            buttonAnimationHandlerSent();
-        })
-        .catch((error) => {
-            buttonAnimationHandlerError();
-            console.log(error);
+
         });
+        buttonAnimationHandlerSent();
     }
 
     const [maskedValue, setMaskedValue] = useState("");
@@ -86,33 +70,33 @@ const ContactPage = () => {
             <div className={styles.backgroundImage}><Image src="https://res.cloudinary.com/djf0isef7/image/upload/v1635020544/public/contactImage_unuecn.jpg" quality={100} width={1920} height={1080} objectFit="cover" objectPosition="center" /></div>
             <div className={styles.contentWrapper}>
                 <div className={styles.mailSenderWrapper}>
-                    <h1 className={styles.title}>Entre em Contato</h1>
+                    <h1 className={styles.title}>Contact</h1>
                     <div className={styles.formsContent}>
                         <form className={styles.form} method="post" onSubmit={handleOnSubmit}>
                             <div className={styles.inputRows}>
                                 <fieldset className={styles.fieldset}>
-                                    <legend align="right" className={styles.legend}>Nome</legend>
-                                    <input className={styles.input} type="text" name="name" placeholder="Seu Nome" autoComplete="off" required />
+                                    <legend align="right" className={styles.legend}>Name</legend>
+                                    <input className={styles.input} type="text" name="name" placeholder="Your name" autoComplete="off" required />
                                 </fieldset>
                                 <fieldset className={styles.fieldset}>
-                                    <legend align="right" className={styles.legend}>Último Nome</legend>
-                                    <input className={styles.input} type="text" name="lastName" placeholder="Seu Último Nome" autoComplete="off" required />
+                                    <legend align="right" className={styles.legend}>Last Name</legend>
+                                    <input className={styles.input} type="text" name="lastName" placeholder="Your last name" autoComplete="off" required />
                                 </fieldset>
                             </div>
                             <div className={styles.inputRows}>
                                 <fieldset className={styles.fieldset}>
                                     <legend align="right" className={styles.legend}>Email</legend>
-                                    <input className={styles.input} type="email" name="email" placeholder="Seu Email" autoComplete="off" required />
+                                    <input className={styles.input} type="email" name="email" placeholder="Your email" autoComplete="off" required />
                                 </fieldset>
                                 <fieldset className={styles.fieldset}>
-                                    <legend align="right" className={styles.legend}>Telefone</legend>
-                                    <input className={styles.input} type="text" name="phoneNumber" onChange={numberMask} value={maskedValue} minLenght="3" placeholder="(__)_____-____" autoComplete="off" required />
+                                    <legend align="right" className={styles.legend}>Phone</legend>
+                                    <input className={styles.input} type="text" name="phoneNumber" onChange={numberMask} value={maskedValue} placeholder="(__)_____-____" autoComplete="off" required />
                                 </fieldset>
                             </div>
                             <div className={styles.inputRows}>
                                 <fieldset className={styles.fieldset}>
-                                    <legend align="right" className={styles.legend}>Mensagem</legend>
-                                    <textarea className={styles.input} type="text" onChange={recalculate} name="message" maxLength="320" placeholder="Diga me o que pensa!" autoComplete="off" required />
+                                    <legend align="right" className={styles.legend}>Message</legend>
+                                    <textarea className={styles.input} type="text" onChange={recalculate} name="message" maxLength="320" placeholder="Tell me what you think!" autoComplete="off" required />
                                     <span className={styles.counter} id="counter">{countedValue} / 320</span>
                                 </fieldset>
                             </div>
@@ -126,16 +110,16 @@ const ContactPage = () => {
                 </div>
                 <div className={styles.socialMedia}>
                     <div className={styles.socialMediasBoxes}>
-                        <div className={styles.svg}><Link href="https://www.facebook.com/profile.php?id=100009988028985"><a target="_blank"><FacebookLogo /></a></Link></div>
-                        <div className={styles.svg}><Link href="https://www.instagram.com/julia_costt/" ><a target="_blank"><InstagramLogo /></a></Link></div>
-                        <div className={styles.svg}><Link href="https://www.linkedin.com/in/julia-soares-costa-37b920192/"><a target="_blank"><LinkedinLogo /></a></Link></div>
-                        <div className={styles.svg}><Link href=""><a target="_blank"><ResumeLogo /></a></Link></div>
+                        <div className={styles.svg} alt="Facebook"><Link href="https://www.facebook.com/profile.php?id=100009988028985"><a target="_blank"><FacebookLogo /></a></Link></div>
+                        <div className={styles.svg} alt="Instagram"><Link href="https://www.instagram.com/julia_costt/" ><a target="_blank"><InstagramLogo /></a></Link></div>
+                        <div className={styles.svg} alt="Linked In"><Link href="https://www.linkedin.com/in/julia-soares-costa-37b920192/"><a target="_blank"><LinkedinLogo /></a></Link></div>
+                        <div className={styles.svg} alt="Resume"><Link href=""><a target="_blank"><ResumeLogo /></a></Link></div>
                     </div>
                     <div className={styles.socialMediasBoxesActive}>
-                        <div className={styles.svgActive}><FacebookLogoActive /></div>
-                        <div className={styles.svgActive}><InstagramLogoActive /></div>
-                        <div className={styles.svgActive}><LinkedinLogoActive /></div>
-                        <div className={styles.svgActive}><ResumeLogoActive /></div>
+                        <div className={styles.svgActive} alt="Facebook"><FacebookLogoActive /></div>
+                        <div className={styles.svgActive} alt="Instagram"><InstagramLogoActive /></div>
+                        <div className={styles.svgActive} alt="Linked In"><LinkedinLogoActive /></div>
+                        <div className={styles.svgActive} alt="Resume"><ResumeLogoActive /></div>
                     </div>
                 </div>
             </div>

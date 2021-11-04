@@ -107,7 +107,7 @@ export default function Projects({ datas }) {
                     </div>
                 ))}
             </Slider>
-            <span className={styles.advise}><br />Para visualizar melhor, vire o celular!</span>
+            <span className={styles.advise}><br />For a better view, turn the phone over!</span>
             {datas.map((mod) => (<>
                 <TextAndImage
                     image={(size.width > 1024) ? mod.descriptionImageOne : mod.descriptionImageOneMobile}
