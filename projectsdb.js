@@ -6,19 +6,19 @@ export const datas = {
             descriptionImageOneMobile: "https://res.cloudinary.com/djf0isef7/image/upload/v1635702589/public/notebookM_qwiibd.png",
             descriptionImageTwo: "https://res.cloudinary.com/djf0isef7/image/upload/v1635705120/public/quadro_yovyan.png",
             descriptionImageTwoMobile: "https://res.cloudinary.com/djf0isef7/image/upload/v1635705120/public/quadro_yovyan.png",
-            title: "alo caralho",
+            title: "Title",
             paragraphs: [
                 {
                     id: 1,
-                    text: "aaaaa"
+                    text: "paragraph"
                 },
                 {
                     id: 2,
-                    text: "aaaaa"
+                    text: "paragraph"
                 },
                 {
                     id: 3,
-                    text: "aaaaa"
+                    text: "paragraph"
                 },
             ],
             images: [
@@ -42,19 +42,19 @@ export const datas = {
             descriptionImageOneMobile: "https://res.cloudinary.com/djf0isef7/image/upload/v1635702589/public/notebookM_qwiibd.png",
             descriptionImageTwo: "https://res.cloudinary.com/djf0isef7/image/upload/v1635705120/public/quadro_yovyan.png",
             descriptionImageTwoMobile: "https://res.cloudinary.com/djf0isef7/image/upload/v1635705120/public/quadro_yovyan.png",
-            title: "alo caralho",
+            title: "Title",
             paragraphs: [
                 {
                     id: 1,
-                    text: "aaaaa"
+                    text: "paragraph"
                 },
                 {
                     id: 2,
-                    text: "aaaaa"
+                    text: "paragraph"
                 },
                 {
                     id: 3,
-                    text: "aaaaa"
+                    text: "paragraph"
                 },
             ],
             images: [
@@ -78,19 +78,19 @@ export const datas = {
             descriptionImageOneMobile: "https://res.cloudinary.com/djf0isef7/image/upload/v1635702589/public/notebookM_qwiibd.png",
             descriptionImageTwo: "https://res.cloudinary.com/djf0isef7/image/upload/v1635705120/public/quadro_yovyan.png",
             descriptionImageTwoMobile: "https://res.cloudinary.com/djf0isef7/image/upload/v1635705120/public/quadro_yovyan.png",
-            title: "alo caralho",
+            title: "Title",
             paragraphs: [
                 {
                     id: 1,
-                    text: "aaaaa"
+                    text: "paragraph"
                 },
                 {
                     id: 2,
-                    text: "aaaaa"
+                    text: "paragraph"
                 },
                 {
                     id: 3,
-                    text: "aaaaa"
+                    text: "paragraph"
                 },
             ],
             images: [
@@ -138,19 +138,19 @@ export const datas = {
             descriptionImageOneMobile: "https://res.cloudinary.com/djf0isef7/image/upload/v1635702589/public/notebookM_qwiibd.png",
             descriptionImageTwo: "https://res.cloudinary.com/djf0isef7/image/upload/v1635705120/public/quadro_yovyan.png",
             descriptionImageTwoMobile: "https://res.cloudinary.com/djf0isef7/image/upload/v1635705120/public/quadro_yovyan.png",
-            title: "alo caralho",
+            title: "Title",
             paragraphs: [
                 {
                     id: 1,
-                    text: "aaaaa"
+                    text: "paragraph"
                 },
                 {
                     id: 2,
-                    text: "aaaaa"
+                    text: "paragraph"
                 },
                 {
                     id: 3,
-                    text: "aaaaa"
+                    text: "paragraph"
                 },
             ],
             images: [
@@ -196,19 +196,19 @@ export const datas = {
             descriptionImageOneMobile: "https://res.cloudinary.com/djf0isef7/image/upload/v1635702589/public/notebookM_qwiibd.png",
             descriptionImageTwo: "https://res.cloudinary.com/djf0isef7/image/upload/v1635705120/public/quadro_yovyan.png",
             descriptionImageTwoMobile: "https://res.cloudinary.com/djf0isef7/image/upload/v1635705120/public/quadro_yovyan.png",
-            title: "alo caralho",
+            title: "Title",
             paragraphs: [
                 {
                     id: 1,
-                    text: "aaaaa"
+                    text: "paragraph"
                 },
                 {
                     id: 2,
-                    text: "aaaaa"
+                    text: "paragraph"
                 },
                 {
                     id: 3,
-                    text: "aaaaa"
+                    text: "paragraph"
                 },
             ],
             images: [
@@ -250,19 +250,19 @@ export const datas = {
             descriptionImageOneMobile: "https://res.cloudinary.com/djf0isef7/image/upload/v1635702589/public/notebookM_qwiibd.png",
             descriptionImageTwo: "https://res.cloudinary.com/djf0isef7/image/upload/v1635705120/public/quadro_yovyan.png",
             descriptionImageTwoMobile: "https://res.cloudinary.com/djf0isef7/image/upload/v1635705120/public/quadro_yovyan.png",
-            title: "alo caralho",
+            title: "Title",
             paragraphs: [
                 {
                     id: 1,
-                    text: "aaaaa"
+                    text: "paragraph"
                 },
                 {
                     id: 2,
-                    text: "aaaaa"
+                    text: "paragraph"
                 },
                 {
                     id: 3,
-                    text: "aaaaa"
+                    text: "paragraph"
                 },
             ],
             images: [
@@ -292,19 +292,19 @@ export const datas = {
             descriptionImageOneMobile: "https://res.cloudinary.com/djf0isef7/image/upload/v1635702589/public/notebookM_qwiibd.png",
             descriptionImageTwo: "https://res.cloudinary.com/djf0isef7/image/upload/v1635705120/public/quadro_yovyan.png",
             descriptionImageTwoMobile: "https://res.cloudinary.com/djf0isef7/image/upload/v1635705120/public/quadro_yovyan.png",
-            title: "alo caralho",
+            title: "Title",
             paragraphs: [
                 {
                     id: 1,
-                    text: "aaaaa"
+                    text: "paragraph"
                 },
                 {
                     id: 2,
-                    text: "aaaaa"
+                    text: "paragraph"
                 },
                 {
                     id: 3,
-                    text: "aaaaa"
+                    text: "paragraph"
                 },
             ],
             images: [
@@ -326,19 +326,19 @@ export const datas = {
             descriptionImageOneMobile: "https://res.cloudinary.com/djf0isef7/image/upload/v1635702589/public/notebookM_qwiibd.png",
             descriptionImageTwo: "https://res.cloudinary.com/djf0isef7/image/upload/v1635705120/public/quadro_yovyan.png",
             descriptionImageTwoMobile: "https://res.cloudinary.com/djf0isef7/image/upload/v1635705120/public/quadro_yovyan.png",
-            title: "alo caralho",
+            title: "Title",
             paragraphs: [
                 {
                     id: 1,
-                    text: "aaaaa"
+                    text: "paragraph"
                 },
                 {
                     id: 2,
-                    text: "aaaaa"
+                    text: "paragraph"
                 },
                 {
                     id: 3,
-                    text: "aaaaa"
+                    text: "paragraph"
                 },
             ],
             images: [
@@ -356,19 +356,19 @@ export const datas = {
             descriptionImageOneMobile: "https://res.cloudinary.com/djf0isef7/image/upload/v1635702589/public/notebookM_qwiibd.png",
             descriptionImageTwo: "https://res.cloudinary.com/djf0isef7/image/upload/v1635705120/public/quadro_yovyan.png",
             descriptionImageTwoMobile: "https://res.cloudinary.com/djf0isef7/image/upload/v1635705120/public/quadro_yovyan.png",
-            title: "alo caralho",
+            title: "Title",
             paragraphs: [
                 {
                     id: 1,
-                    text: "aaaaa"
+                    text: "paragraph"
                 },
                 {
                     id: 2,
-                    text: "aaaaa"
+                    text: "paragraph"
                 },
                 {
                     id: 3,
-                    text: "aaaaa"
+                    text: "paragraph"
                 },
             ],
             images: [
@@ -398,19 +398,19 @@ export const datas = {
             descriptionImageOneMobile: "https://res.cloudinary.com/djf0isef7/image/upload/v1635702589/public/notebookM_qwiibd.png",
             descriptionImageTwo: "https://res.cloudinary.com/djf0isef7/image/upload/v1635705120/public/quadro_yovyan.png",
             descriptionImageTwoMobile: "https://res.cloudinary.com/djf0isef7/image/upload/v1635705120/public/quadro_yovyan.png",
-            title: "alo caralho",
+            title: "Title",
             paragraphs: [
                 {
                     id: 1,
-                    text: "aaaaa"
+                    text: "paragraph"
                 },
                 {
                     id: 2,
-                    text: "aaaaa"
+                    text: "paragraph"
                 },
                 {
                     id: 3,
-                    text: "aaaaa"
+                    text: "paragraph"
                 },
             ],
             images: [
