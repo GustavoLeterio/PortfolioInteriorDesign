@@ -122,20 +122,7 @@ export default function Projects({ datas }) {
                     height={885}
                     title={mod.title}
                     paragraphs={datas.map((data) => Object.values(data.paragraphs).map((mod) => mod))}
-                    imageSide="right" />
-                <TextAndImage
-                    image={(size.width > 1024) ? mod.descriptionImageTwo : mod.descriptionImageTwoMobile}
-                    cssArrangement={
-                        {
-                            right: (size.width > 1024) ? "1vw" : "0",
-                            padding: (size.width > 1024) ? "5vh 0 0 0" : "2vh 0",
-                            margin: (size.width <= 1024) ? "0 auto" : "0",
-                        }}
-                    width={849}
-                    height={885}
-                    title={datas.map((data) => data.title)}
-                    paragraphs={datas.map((data) => Object.values(data.paragraphs).map((mod) => mod))}
-                    imageSide="left" />
+                />
             </>))}
         </div>
     )

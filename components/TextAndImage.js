@@ -29,15 +29,10 @@ const TextAndImage = (props) => {
     const size = useWindowSize();
     return (
         <div className={styles.aboutPage}>
-            {(size.width > 1024) && (props.imageSide == "left") ? <div className={styles.imageWrapper} style={props.cssArrangement}><Image src={props.image} quality={100} width={props.width} height={props.height} layout="responsive" /></div> : ''}
+
             <div className={styles.wrapperText}>
                 <h1 className={styles.title}>
-                    {
-                        (datas !== undefined) ?
-                            props.title 
-                            :
-                            "About"
-                    }
+                    { (datas !== undefined) ? props.title : "About" }
 
                 </h1>
                 {
@@ -53,13 +48,19 @@ const TextAndImage = (props) => {
                         (
                             <>
                                 <p className={styles.text}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse fermentum erat id nunc bibendum dapibus. Donec nec lacus ut lectus mattis sodales. Etiam pellentesque ex mi, et cursus turpis pharetra eu. Donec porta dictum sapien a sagittis. Quisque nulla nisi, fermentum in tortor et, efficitur maximus erat. Donec elit leo, malesuada ut ipsum vel, pulvinar mollis purus. Nulla facilisi. Integer posuere iaculis mauris, nec faucibus nisl facilisis a. Quisque ullamcorper velit eget bibendum auctor. Ut hendrerit egestas lobortis. Maecenas ligula odio, interdum eget metus at, pellentesque laoreet nunc.
+                                    Atuando na área de Edificações há mais de dois anos ao me formar como Técnica em Edificações, possuo amplo conhecimento no campo de Engenharia e Arquitetura. Participei de reuniões e briefings para compreensão das exigências e padronização dos clientes e entregar o melhor resultado dentro das conformidades da legislação e normas técnicas. Apresento facilidade de comunicação, adaptação e motivação, mantendo em constante aprendizado e atualização, dessa forma, elaborei projetos de design de interiores e detalhamentos, sendo peça essencial para o processo criativo de desenvolvimento e concepção de projetos arquitetônicos.
+                                </p>
+                                <p className={styles.text}>
+                                    De natureza criativa e determinada, mantenho-me atualizada através de redes sociais, workshops on-line e conteúdo digital sobre as tendências e novidades do setor. Com um relacionamento cortes, mantenho um ótimo contato e interação com diferentes fornecedores e profissionais do setor. Nos projetos luminotécnicos, minha experiência contempla um diferencial de característica técnica com a correta aplicação das luminárias e suas especificações, criando um ambiente harmonioso e com característica unica, uma assinatura pessoal.
+                                </p>
+                                <p className={styles.text}>
+                                    Disponho de alguns projetos desenhados e dimensionados por mim enquanto fiz parte da equipe de engenheiros e arquitetos de um renomeado escritório de projetos e reformas civil. Estes projetos são decorrentes de dedicação nos estudos de formação profissional e especializações como o Tecnologo em Design de Interiores ao longo de minha jornada.
                                 </p>
                             </>
                         )
                 }
             </div>
-            {(props.imageSide == "right") || (size.width <= 1024) && (props.imageSide == "left") ? <div className={styles.imageWrapper} style={props.cssArrangement}><Image src={props.image} quality={100} width={props.width} height={props.height} layout="responsive" /></div> : ''}
+            <div className={styles.imageWrapper} style={props.cssArrangement}><Image src={props.image} quality={100} width={props.width} height={props.height} layout="responsive" /></div>
         </div >
     );
 }

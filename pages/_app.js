@@ -5,7 +5,7 @@ import '../styles/globals.css'
 import Navbar from '../components/Navbar'
 import Contact from '../components/Contact'
 
-function MyApp({ Component, pageProps, router }) {
+function MyApp({ Component, pageProps }) {
   return (
     <>
       <Navbar />

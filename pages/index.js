@@ -62,6 +62,7 @@ export default function Home({ datas }) {
         }
       ]
     };
+
     return (
       <div className={styles.categoryWrapper} >
         <h4 className={styles.subTitle}>{category}</h4>
@@ -83,6 +84,7 @@ export default function Home({ datas }) {
       </div >
     )
   }
+
   return (
     <>
       <Head>
@@ -95,7 +97,7 @@ export default function Home({ datas }) {
       <div style={{ position: "relative", top: "-6vh" }} id="home" />
       <LandingPage />
       <div style={{ position: "relative", top: "-6vh" }} id="about" />
-      <TextAndImage image="https://res.cloudinary.com/djf0isef7/image/upload/v1635020544/public/aboutImage_dgza1m.png" width={849} height={999} cssArrangement={{ left: 0 }} imageSide="right" />
+      <TextAndImage image="https://res.cloudinary.com/djf0isef7/image/upload/v1635020544/public/aboutImage_dgza1m.png" width={849} height={999} />
       <div style={{ position: "relative", top: "-6vh" }} id="projects" />
       <div className={styles.galeryPage}>
         <h1 className={styles.title}>Projects</h1>
@@ -106,10 +108,12 @@ export default function Home({ datas }) {
           {lineOrganizer(datas.fld, "fld", "Project FLD")}
           {lineOrganizer(datas.isab, "isab", "Project ISAB")}
           {lineOrganizer(datas.oft, "oft", "Project OFT")}
-          {lineOrganizer(datas.ptg, "ptg", "Project PTG")}
+          {lineOrganizer(datas.oft, "oft", "Gislaine e Valter")}
+          {lineOrganizer(datas.oft, "oft", "Marília e Ney")}
+          {lineOrganizer(datas.oft, "oft", "Vânia")}
         </div>
       </div>
-      <div id="contact" />
+      <div id="contact"/>
     </>
   )
 }
