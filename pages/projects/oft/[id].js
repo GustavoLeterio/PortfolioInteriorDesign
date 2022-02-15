@@ -61,7 +61,7 @@ export default function Projects({ datas }) {
                             <span className={styles.text}>
                                 {mod.name}
                             </span>
-                            <a href={mod.link} className={styles.button} target="_blank">
+                            <a href={mod.link} className={styles.button} target="_blank" rel="noreferrer">
                                 <ButtonArrow />
                             </a>
                         </div>
