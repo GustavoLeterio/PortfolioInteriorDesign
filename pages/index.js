@@ -1,6 +1,5 @@
-import { React } from 'react';
+import { React, useEffect } from 'react';
 import Slider from 'react-slick';
-import Head from 'next/head'
 import LandingPage from '../components/LandingPage'
 import TextAndImage from '../components/TextAndImage'
 import styles from '../styles/galery.module.css'
@@ -14,6 +13,7 @@ export const getStaticProps = async () => {
   }
 }
 
+
 function SampleArrow(props) {
   const { onClick } = props;
   return (
@@ -25,8 +25,8 @@ function SampleArrow(props) {
 export default function Home({ datas }) {
   function lineOrganizer(data, path, category) {
 
-    function settingCustomizer(firstCondition, secondCondition) {
-      return Object.keys(data).length > 3 ? firstCondition : secondCondition;
+    function settingCustomizer(firstCondition, secondCondition, minLength) {
+      return Object.keys(data).length > minLength ? firstCondition : secondCondition;
     }
 
     let settings = {
@@ -35,26 +35,26 @@ export default function Home({ datas }) {
       speed: 300,
       infinite: false,
       slidesToScroll: 1,
-      slidesToShow: settingCustomizer(3, false),
+      slidesToShow: settingCustomizer(3, false,3),
       variableWidth: true,
-      prevArrow: settingCustomizer(<SampleArrow content="&#10094;" />, <SampleArrow content="&nbsp;" />),
-      nextArrow: settingCustomizer(<SampleArrow content="&#10095;" />, false),
+      prevArrow: settingCustomizer(<SampleArrow content="&#10094;" />, <SampleArrow content="&nbsp;" />, 3),
+      nextArrow: settingCustomizer(<SampleArrow content="&#10095;" />, false, 3),
       responsive: [
         {
-          breakpoint: 1025,
+          breakpoint: 1024,
           settings: {
             draggable: true,
-            slidesToShow: settingCustomizer(2, false),
+            slidesToShow: settingCustomizer(2, false, 2),
             focusOnSelect: true,
             prevArrow: false,
             nextArrow: false,
           }
         },
         {
-          breakpoint: 768,
+          breakpoint: 440,
           settings: {
             draggable: true,
-            slidesToShow: settingCustomizer(1, false),
+            slidesToShow: settingCustomizer(1, false, 2),
             focusOnSelect: true,
             prevArrow: false,
             nextArrow: false,
@@ -87,33 +87,26 @@ export default function Home({ datas }) {
 
   return (
     <>
-      <Head>
-        <title>Julia Costa Portfolio</title>
-        <meta name="description" content="Julia Costa Interior Designer" />
-        <meta name="keywords" content="Julia Costa, Interior Designer, Portfolio" />
-        <meta property="og:image" />
-        <link rel="icon" href="https://img.icons8.com/office/16/000000/design.png" type="image/x-icon" />
-      </Head>
-      <div style={{ position: "relative", top: "-6vh" }} id="home" />
+      <div style={{ position: "relative", top: "-3vh" }} id="home" />
       <LandingPage />
-      <div style={{ position: "relative", top: "-6vh" }} id="about" />
-      <TextAndImage image="https://res.cloudinary.com/djf0isef7/image/upload/v1635020544/public/aboutImage_dgza1m.png" width={849} height={999} />
-      <div style={{ position: "relative", top: "-6vh" }} id="projects" />
+      <div style={{ position: "relative", top: "-3vh" }} id="about" />
+      <TextAndImage image="https://res.cloudinary.com/djf0isef7/image/upload/v1643762313/public/aboutImage_gmwz5m.jpg" width={1195} height={865} layout="responsive" ssArrangement={{ float: "right" }} />
+      <div style={{ position: "relative", top: "-3vh" }} id="projects" />
       <div className={styles.galeryPage}>
         <h1 className={styles.title}>Projects</h1>
         <div className={styles.galery}>
           {lineOrganizer(datas.rnt, "rnt", "Project RNT")}
           {lineOrganizer(datas.ecrt, "ecrt", "Project ECRT")}
           {lineOrganizer(datas.esp, "esp", "Project ESP")}
-          {lineOrganizer(datas.fld, "fld", "Project FLD")}
+          {/*lineOrganizer(datas.fld, "fld", "Project FLD")*/}
+          {lineOrganizer(datas.glv, "glv", "Project GLV")}
           {lineOrganizer(datas.isab, "isab", "Project ISAB")}
+          {lineOrganizer(datas.mrn, "mrn", "Project MRN")}
           {lineOrganizer(datas.oft, "oft", "Project OFT")}
-          {lineOrganizer(datas.oft, "oft", "Gislaine e Valter")}
-          {lineOrganizer(datas.oft, "oft", "Marília e Ney")}
-          {lineOrganizer(datas.oft, "oft", "Vânia")}
+          {lineOrganizer(datas.vna, "vna", "Project VNA")}
         </div>
       </div>
-      <div id="contact"/>
+      <div id="contact" />
     </>
   )
 }

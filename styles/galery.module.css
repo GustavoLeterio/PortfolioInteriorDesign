@@ -20,6 +20,7 @@
 .line {
     display: flex;
     padding: 2vh 0;
+    width: auto;
 }
 
 .line:hover .arrow, .line:hover .arrow {
@@ -130,7 +131,8 @@
 }
 
 .name {
-    font-size: 2vw;
+    padding: 4px 0;
+    font-size: clamp(1rem, 2vw, 2rem);
     font-weight: bold;
     color: white;
     z-index: 1;
@@ -150,12 +152,16 @@
     }
     .name {
         margin: 1.5% 0 0 4%;
+        font-size: 1.5rem;
     }
 }
 
 @media (max-width:1280px) {
     .categoryWrapper {
         min-height: 28vh;
+    }
+    .name {
+        font-size: 1.5rem;
     }
 }
 

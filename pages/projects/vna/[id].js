@@ -8,7 +8,7 @@ import ButtonArrow from '/public/ButtonArrow.js'
 
 
 export const getStaticPaths = async () => {
-    const paths = Object.values(datas.rnt).map(mod => {
+    const paths = Object.values(datas.vna).map(mod => {
         return { params: { id: mod.id.toString() } }
     });
     return { paths, fallback: false }
@@ -16,7 +16,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
     const id = context.params.id;
-    const data = Object.values(datas.rnt).filter((mod) => mod.id.toString() === id)
+    const data = Object.values(datas.vna).filter((mod) => mod.id.toString() === id)
     return {
         props: {
             datas: data

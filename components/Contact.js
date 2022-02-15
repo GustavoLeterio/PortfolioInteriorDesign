@@ -47,12 +47,6 @@ const ContactPage = () => {
         buttonAnimationHandlerSent();
     }
 
-    const [maskedValue, setMaskedValue] = useState("");
-    function numberMask(ev) {
-        const originalValue = unMask(ev.target.value);
-        const maskedValue = mask(originalValue, ['(99)99999-9999']);
-        setMaskedValue(maskedValue);
-    }
 
     const [countedValue, setCount] = useState("0");
     function recalculate(ev) {
@@ -90,7 +84,7 @@ const ContactPage = () => {
                                 </fieldset>
                                 <fieldset className={styles.fieldset}>
                                     <legend align="right" className={styles.legend}>Phone</legend>
-                                    <input className={styles.input} type="text" name="phoneNumber" onChange={numberMask} value={maskedValue} placeholder="(__)_____-____" autoComplete="off" required />
+                                    <input className={styles.input} type="text" name="phoneNumber" placeholder="Phone Number" autoComplete="off" required />
                                 </fieldset>
                             </div>
                             <div className={styles.inputRows}>

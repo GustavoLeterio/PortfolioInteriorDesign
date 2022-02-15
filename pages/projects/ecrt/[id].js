@@ -4,6 +4,8 @@ import styles from '/styles/project.module.css';
 import { useEffect, useState } from 'react';
 import TextAndImage from '/components/TextAndImage'
 import { datas } from '/projectsdb'
+import ButtonArrow from '/public/ButtonArrow.js'
+
 
 export const getStaticPaths = async () => {
     const paths = Object.values(datas.ecrt).map(mod => {
@@ -21,6 +23,8 @@ export const getStaticProps = async (context) => {
         }
     }
 }
+
+
 
 function useWindowSize() {
     const [windowSize, setWindowSize] = useState({
@@ -45,6 +49,29 @@ function useWindowSize() {
 }
 
 export default function Projects({ datas }) {
+
+    function galery(data) {
+
+        return (
+            <div className={styles.fileWrapper}>
+                {data.map((data) => data.map((mod) =>
+                    <div className={styles.fileCard} key={mod.id}>
+                        <div className={styles.imageCardWrapper}><Image src={mod.image} className={styles.cardImage} blurDataURL={mod.image} placeholder="blur" quality={100} width={600} height={(size.width <= 1024) ? 700 : 800} objectFit="cover" /></div>
+                        <div className={styles.content}>
+                            <span className={styles.text}>
+                                {mod.name}
+                            </span>
+                            <a href={mod.link} className={styles.button} target="_blank">
+                                <ButtonArrow />
+                            </a>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        );
+    }
+
+
     const size = useWindowSize();
     useEffect(() => {
         jumpToTop()
@@ -97,6 +124,7 @@ export default function Projects({ datas }) {
             }
         ]
     };
+
     return (
 
         <div className={styles.projectPage} id="page">
@@ -108,22 +136,24 @@ export default function Projects({ datas }) {
                 ))}
             </Slider>
             <span className={styles.advise}><br />For a better view, turn the phone over!</span>
-            {datas.map((mod) => (<>
-                <TextAndImage
-                    image={(size.width > 1024) ? mod.descriptionImageOne : mod.descriptionImageOneMobile}
-                    cssArrangement={
-                        {
-                            padding: (size.width > 1024) ? "5vh 0 0 0" : "2vh 0",
-                            width: (size.width <= 1024) && (size.width > 768) ? "70vw" : (size.width <= 768) ? "80vw" : "",
-                            margin: (size.width <= 1024) ? "0 auto" : "0",
-                        }}
-                    width={(size.width <= 1024) ? 1164 : 848}
-                    height={885}
-                    title={mod.title}
-                    paragraphs={datas.map((data) => Object.values(data.paragraphs).map((mod) => mod))}
+            {datas.map((mod) => (
+                <>
+                    <TextAndImage
+                        image={mod.textImage}
+                        width={1195}
+                        height={865}
+                        title={mod.title}
+                        paragraphs={datas.map((data) => Object.values(data.paragraphs).map((mod) => mod))}
                     />
-
-            </>))}
+                </>
+            ))}
+            {datas.map((data) => Object.values(data.files).length) > 0?
+                <section className={styles.fileSection}>
+                    <h4 className={styles.title}>Other Files</h4>
+                    {galery(datas.map((data) => Object.values(data.files).map((mod) => mod)))}
+                </section>
+                : null
+            }
         </div>
     )
 }

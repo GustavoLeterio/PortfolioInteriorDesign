@@ -110,6 +110,87 @@
     font-size: 4vw;
 }
 
+.fileSection {
+    min-height: calc(100vh - (1.5vh + 50px));
+    margin: 2vh 0 2vh 7vw;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.title {
+    font-size: clamp(3.5rem, 7vw, 6rem);
+    font-weight: bold;
+    line-height: 113%;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.fileWrapper {
+    margin: 0 0 0 1vw;
+}
+
+.fileCard {
+    margin: 5vh 3vw 5vh 1vw;
+    float: left;
+    width: 15vw;
+    height: 20vw;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: 200ms ease-in-out;
+    box-shadow: 0 0 2px 0 #00000055;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 10% 5%;
+    width: 100%;
+    transition: 200ms ease-in-out;
+}
+
+.fileCard:hover .content {
+    transform: translatey(-100%);
+}
+
+.button {
+    margin:0 0 0 5%;
+    border: none;
+    background-color: #212121;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    float: right;
+    transition: 200ms ease-in-out;
+    cursor: pointer;
+}
+
+.button svg {
+    background-color: transparent;
+}
+
+.button svg path {
+    transition: 200ms ease-in-out;
+}
+
+.button:hover {
+    background-color: #F6F6F6;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25) inset;
+}
+
+.button:hover svg {
+    background-color: transparent;
+}
+
+.button:hover svg path {
+    fill: black;
+}
+
+.text {
+    font-size: clamp(1rem, 2vw, 2rem);
+}
+
 @media (max-width:1366px) and (min-width:1360px) {
     .slider {
         margin-top: calc(1.5vh + 55px);
@@ -117,67 +198,93 @@
         height: 83vh;
         overflow: hidden;
     }
+    .title{
+        font-size: clamp(3.5rem, 6vw, 10rem);
+    }
     .imageBox {
         width: 100vw;
         height: 83vh;
         overflow: hidden;
     }
+
     .imageBox div img {
         width: 100vw;
         height: 83vh;
     }
+
     .arrow {
         padding: 0 3vw 0 2vw;
         font-size: clamp(2rem, 3.5vw, 4rem);
     }
+
     .button__bar {
         padding: 4vh 0 8vh 0;
         transform: translateY(-11vh);
         background: radial-gradient(closest-side at 50% 50%, rgba(0, 0, 0, 0.3)20%, rgba(0, 0, 0, 0)90%);
     }
 }
-
+@media (max-width:1280px) {
+    .fileCard{
+        width: 18.75vw;
+        height: 25vw;
+    }
+}
 @media (max-width:1024px) {
     .slider {
         width: 100vw;
         height: 50vh;
         overflow: hidden;
     }
-    .imageBox {
-        vertical-align: middle;
-        width: 100vw;
-        height: 50vh;
-        overflow: hidden;
-    }
+
     .imageBox div img {
         vertical-align: middle;
         width: 100vw;
         height: 50vh;
     }
+
     .arrow:nth-last-child(2) {
         transform: translateY(-100%);
     }
-    .button__bar li button {
-        width: 35px;
-        margin: 5px;
-        height: 5px;
+
+    .title {
+        font-size: clamp(3.5rem, 12vw, 10rem);
+    }
+    
+    .fileCard {
+        width: 25vw;
+        height: auto;
+    }
+    
+    .fileCard:hover .content {
+        transform: translatey(0);
+    }
+    .fileSection{
+        margin-top: 5vh;
+    }
+    .text{
+        font-size: clamp(2rem, 2rem, 2.5rem);
     }
 }
 
 @media (max-width:1024px) and (orientation:landscape) {
     .slider {
+        margin: 0;
         width: 100vw;
-        height: 85vh;
+        height: 100vh;
         overflow: hidden;
+    }
+    .button__bar {
+        transform: translateY(-13vh);
     }
     .imageBox {
         width: 100vw;
-        height: 85vh;
+        height: 100vh;
         overflow: hidden;
     }
+
     .imageBox div img {
         width: 100vw;
-        height: 85vh;
+        height: 100vh;
     }
 }
 
@@ -187,52 +294,69 @@
         height: 30vh;
         overflow: hidden;
     }
+
     .imageBox {
         vertical-align: middle;
         width: 100vw;
         height: 30vh;
         overflow: hidden;
     }
+
     .imageBox div img {
         vertical-align: middle;
         width: 100vw;
         height: 30vh;
     }
+
     .arrow:nth-last-child(2) {
         transform: translateY(-100%);
     }
+
     .button__bar li button {
         width: 20px;
         margin: 3px;
     }
+
     .advise {
         display: flex;
         justify-content: center;
     }
+    .fileSection{
+        margin: 5vh 0 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .fileWrapper {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .fileCard {
+        width: 80vw;
+        height: auto;
+    }
 }
 
-@media (max-width:1023px) and (orientation:landscape) {
+@media (max-width:768px) and (orientation:landscape){
     .slider {
-        margin-top: 0;
+        margin: 0;
         width: 100vw;
         height: 100vh;
         overflow: hidden;
+    }
+    .button__bar {
+        transform: translateY(-13vh);
     }
     .imageBox {
         width: 100vw;
         height: 100vh;
         overflow: hidden;
     }
+
     .imageBox div img {
         width: 100vw;
         height: 100vh;
-    }
-    .button__bar {
-        padding: 15vh 0 23vh 0;
-        transform: translateY(-25vh);
-        background: radial-gradient(closest-side at 50% 50%, rgba(0, 0, 0, 0.4)20%, rgba(0, 0, 0, 0)80%);
-    }
-    .advise {
-        display: none;
     }
 }
