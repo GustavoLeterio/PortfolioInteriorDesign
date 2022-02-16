@@ -13,31 +13,31 @@ export const datas = {
             files: [
                 {
                     id: 1,
-                    name: "Planta",
+                    name: "Layout",
                     link: "https://drive.google.com/file/d/1cPIcZTWSXJIi9vlzHVoEd7TvlttL_4np/view?usp=sharing",
                     image: "https://res.cloudinary.com/djf0isef7/image/upload/v1644950141/public/RENDERS/PROJETO%20RNT/SOCIAL/OTHER%20FILES/previewImages/1.webp",
                 },
                 {
                     id: 2,
-                    name: "Planta",
-                    link: "https://drive.google.com/file/d/1cPIcZTWSXJIi9vlzHVoEd7TvlttL_4np/view?usp=sharing",
+                    name: "Technical Detailing",
+                    link: "https://drive.google.com/file/d/1Iq3c6qpj5uaoHD_Pt96z-JSNB60gHiu4/view?usp=sharing",
                     image: "https://res.cloudinary.com/djf0isef7/image/upload/v1644957357/public/RENDERS/PROJETO%20RNT/SOCIAL/OTHER%20FILES/previewImages/2.webp",
                 },
                 {
                     id: 3,
-                    name: "Planta",
+                    name: "General View",
                     link: "https://res.cloudinary.com/djf0isef7/image/upload/v1644958151/public/RENDERS/PROJETO%20RNT/SOCIAL/OTHER%20FILES/Images/3.webp",
                     image: "https://res.cloudinary.com/djf0isef7/image/upload/v1644961478/public/RENDERS/PROJETO%20RNT/SOCIAL/OTHER%20FILES/previewImages/3.webp",
                 },
                 {
                     id: 4,
-                    name: "Planta",
+                    name: "Humanized Layout",
                     link: "https://res.cloudinary.com/djf0isef7/image/upload/v1644958151/public/RENDERS/PROJETO%20RNT/SOCIAL/OTHER%20FILES/Images/4.webp",
                     image: "https://res.cloudinary.com/djf0isef7/image/upload/v1644958790/public/RENDERS/PROJETO%20RNT/SOCIAL/OTHER%20FILES/previewImages/4.webp",
                 },
                 {
                     id: 5,
-                    name: "Planta",
+                    name: "Kitchen View",
                     link: "https://res.cloudinary.com/djf0isef7/image/upload/v1644958151/public/RENDERS/PROJETO%20RNT/SOCIAL/OTHER%20FILES/Images/5.webp",
                     image: "https://res.cloudinary.com/djf0isef7/image/upload/v1644958790/public/RENDERS/PROJETO%20RNT/SOCIAL/OTHER%20FILES/previewImages/5.webp",
                 },
@@ -106,20 +106,38 @@ export const datas = {
                     text: "Applying calm colors to facilitate relaxation, this suite was designed to accommodate the residents after long and intense hours of work. Comfort was a priority and the headboard was applied to the ceiling to help the acoustics of the room that shares a wall with the bathroom, preventing any noise from being noticed. The blackout curtains provide privacy, in addition to balancing with the metal profiles in the furniture support and recamier. The closet and dressing table in the hallway were thought in the couple's daily routine, which demands agility and organization, so I opted with them the design of the furniture and their divisions. The same concept was used in the bathroom, where the cabinets were ornate with mirrors with metal profiles. Moreover, in the bathroom, the highlight is the shower where we made an opening to capture sunlight with glass closure, and lighting through the plaster cast provided an incredible result."
                 }
             ],
-            textImage: "https://res.cloudinary.com/djf0isef7/image/upload/v1644675149/public/RENDERS/PROJETO%20RNT/SOCIAL/textImage_qcjbqu.jpg",
+            textImage: "https://res.cloudinary.com/djf0isef7/image/upload/v1644970284/public/RENDERS/PROJETO%20RNT/SUITE/textImage_njcqv3.jpg",
             files: [
                 {
                     id: 1,
-                    name: "Planta",
+                    name: "Layout",
                     link: "https://drive.google.com/file/d/1uCsJPfLApU0V-lJSqFW9ShDikj2oBPzQ/view?usp=sharing",
                     image: "https://res.cloudinary.com/djf0isef7/image/upload/v1644962095/public/RENDERS/PROJETO%20RNT/SUITE/OTHER%20FILES/imagePreview/1_wkbcu0.webp",
                 },
                 {
                     id: 2,
-                    name: "Planta Humanizada",
-                    link: "https://res.cloudinary.com/djf0isef7/image/upload/v1644962261/public/RENDERS/PROJETO%20RNT/SUITE/OTHER%20FILES/Image/2_rzrdqs.webp",
-                    image: "https://res.cloudinary.com/djf0isef7/image/upload/v1644962230/public/RENDERS/PROJETO%20RNT/SUITE/OTHER%20FILES/imagePreview/2_mbkzp3.webp",
-                }
+                    name: "Technical Detailing 01",
+                    link: "https://drive.google.com/file/d/1sHsCklWUV7y4JaVbPxFROTWqc8u5wMcx/view?usp=sharing",
+                    image: "https://res.cloudinary.com/djf0isef7/image/upload/v1644967862/public/RENDERS/PROJETO%20RNT/SUITE/OTHER%20FILES/imagePreview/2_skxyem.webp",
+                },
+                {
+                    id: 3,
+                    name: "Technical Detailing 02",
+                    link: "https://drive.google.com/file/d/1zHhIf2UJW9248wqia0tqGMOIIJ0-5Fle/view?usp=sharing",
+                    image: "https://res.cloudinary.com/djf0isef7/image/upload/v1644967863/public/RENDERS/PROJETO%20RNT/SUITE/OTHER%20FILES/imagePreview/3_gtxxhl.webp",
+                },
+                {
+                    id: 4,
+                    name: "Technical Detailing 03",
+                    link: "https://drive.google.com/file/d/1bl6U4yxwz_z_ifvF1bPuJBNa2P8RtRZt/view?usp=sharing",
+                    image: "https://res.cloudinary.com/djf0isef7/image/upload/v1644967862/public/RENDERS/PROJETO%20RNT/SUITE/OTHER%20FILES/imagePreview/4_a4maqc.webp",
+                },
+                {
+                    id: 5,
+                    name: "Humanized Layout",
+                    link: "https://res.cloudinary.com/djf0isef7/image/upload/v1644962261/public/RENDERS/PROJETO%20RNT/SUITE/OTHER%20FILES/Image/5.webp",
+                    image: "https://res.cloudinary.com/djf0isef7/image/upload/v1644962230/public/RENDERS/PROJETO%20RNT/SUITE/OTHER%20FILES/imagePreview/5.webp",
+                },
             ],
             images: [
                 {
@@ -181,15 +199,21 @@ export const datas = {
             files: [
                 {
                     id: 1,
-                    name: "Planta",
+                    name: "Layout",
                     link: "https://drive.google.com/file/d/13hHlHeX0iieQSSMq6wb6qkYxEfxrmZl7/view?usp=sharing",
                     image: "https://res.cloudinary.com/djf0isef7/image/upload/v1644962503/public/RENDERS/PROJETO%20RNT/ESCRIT%C3%93RIO/OTHER%20FILES/imagePreview/1_kymvq6.webp",
                 },
                 {
                     id: 2,
-                    name: "Planta",
-                    link: "https://res.cloudinary.com/djf0isef7/image/upload/v1644962652/public/RENDERS/PROJETO%20RNT/ESCRIT%C3%93RIO/OTHER%20FILES/Image/2_oewtsl.webp",
-                    image: "https://res.cloudinary.com/djf0isef7/image/upload/v1644962620/public/RENDERS/PROJETO%20RNT/ESCRIT%C3%93RIO/OTHER%20FILES/imagePreview/2_qrpnmu.jpg",
+                    name: "Technical Detailing",
+                    link: "https://drive.google.com/file/d/1hT3kfEAapSsa6mvnTwDmKG88zjY957OI/view?usp=sharing",
+                    image: "https://res.cloudinary.com/djf0isef7/image/upload/v1644968857/public/RENDERS/PROJETO%20RNT/ESCRIT%C3%93RIO/OTHER%20FILES/imagePreview/2_j5e6ug.webp",
+                },
+                {
+                    id: 3,
+                    name: "Humanized Layout",
+                    link: "https://res.cloudinary.com/djf0isef7/image/upload/v1644962652/public/RENDERS/PROJETO%20RNT/ESCRIT%C3%93RIO/OTHER%20FILES/Image/3.webp",
+                    image: "https://res.cloudinary.com/djf0isef7/image/upload/v1644962620/public/RENDERS/PROJETO%20RNT/ESCRIT%C3%93RIO/OTHER%20FILES/imagePreview/3.jpg",
                 }
             ],
             images: [
@@ -230,10 +254,34 @@ export const datas = {
             files: [
                 {
                     id: 1,
-                    name: "Planta",
-                    link: "https://res.cloudinary.com/djf0isef7/image/upload/v1644963522/public/RENDERS/PROJETO%20GLV/LIVING%20ROOM/OTHER%20FILES/Image/1_in37ml.webp",
-                    image: "https://res.cloudinary.com/djf0isef7/image/upload/v1644963500/public/RENDERS/PROJETO%20GLV/LIVING%20ROOM/OTHER%20FILES/imagePreview/1_mlsebc.webp",
-                }
+                    name: "Technical Detailing 01",
+                    link: "https://drive.google.com/file/d/1_d4d57QrUsO4TxV5NDUR9oODc-STPRZA/view?usp=sharing",
+                    image: "https://res.cloudinary.com/djf0isef7/image/upload/v1644969910/public/RENDERS/PROJETO%20GLV/LIVING%20ROOM/OTHER%20FILES/imagePreview/1_fdwm1v.webp",
+                },
+                {
+                    id: 2,
+                    name: "Technical Detailing 02",
+                    link: "https://drive.google.com/file/d/1cfOMD49Mje1J4BSh_Rnm2XdatmIZ21E7/view?usp=sharing",
+                    image: "https://res.cloudinary.com/djf0isef7/image/upload/v1644969909/public/RENDERS/PROJETO%20GLV/LIVING%20ROOM/OTHER%20FILES/imagePreview/2_fqz6q1.webp",
+                },
+                {
+                    id: 3,
+                    name: "Technical Detailing 03",
+                    link: "https://drive.google.com/file/d/1DpPwTFMojXxH67698pAbje2vCWRkniHa/view?usp=sharing",
+                    image: "https://res.cloudinary.com/djf0isef7/image/upload/v1644969909/public/RENDERS/PROJETO%20GLV/LIVING%20ROOM/OTHER%20FILES/imagePreview/3_nvxhp4.webp",
+                },
+                {
+                    id: 4,
+                    name: "Technical Detailing 04",
+                    link: "https://drive.google.com/file/d/1OEc1gj-3I_HUdLKCK1qZYFj43Jgfn5OR/view?usp=sharing",
+                    image: "https://res.cloudinary.com/djf0isef7/image/upload/v1644969910/public/RENDERS/PROJETO%20GLV/LIVING%20ROOM/OTHER%20FILES/imagePreview/4_juecyz.webp",
+                },
+                {
+                    id: 5,
+                    name: "Humanized Layout",
+                    link: "https://res.cloudinary.com/djf0isef7/image/upload/v1644963522/public/RENDERS/PROJETO%20GLV/LIVING%20ROOM/OTHER%20FILES/Image/5.webp",
+                    image: "https://res.cloudinary.com/djf0isef7/image/upload/v1644963500/public/RENDERS/PROJETO%20GLV/LIVING%20ROOM/OTHER%20FILES/imagePreview/5.webp",
+                },
             ],
             images: [
                 {
@@ -277,7 +325,7 @@ export const datas = {
                     text: "In order to welcome the clients and perform delicate and precise exams, I could not neglect the importance of proper lighting, emphasizing the fact that it is an ophthalmologic service room. This way, we decided to emphasize the application of artificial lighting to maintain better control and facilitate the execution of the exams, considering the demand for a dark environment regularly. I also highlight the application of textured paint on the hallway wall, a discreet and excellent option in environments with high turnover due to minimal maintenance. And the wooden panels, suggested by the client, provided more comfort and receptivity while maintaining the elegance of the room."
                 }
             ],
-            textImage: "https://res.cloudinary.com/djf0isef7/image/upload/v1644675149/public/RENDERS/PROJETO%20RNT/SOCIAL/textImage_qcjbqu.jpg",
+            textImage: "https://res.cloudinary.com/djf0isef7/image/upload/v1644970362/public/RENDERS/PROJETO%20OFT/Cl%C3%ADnica/textImage_mplais.jpg",
             files: [],
             images: [
                 {
@@ -313,7 +361,7 @@ export const datas = {
             files: [
                 {
                     id: 1,
-                    name: "Planta",
+                    name: "Laundry View",
                     link: "https://res.cloudinary.com/djf0isef7/image/upload/v1644963876/public/RENDERS/PROJETO%20ISAB/LAVANDERIA/OTHER%20FILES/Image/1_fhnezf.webp",
                     image: "https://res.cloudinary.com/djf0isef7/image/upload/v1644963885/public/RENDERS/PROJETO%20ISAB/LAVANDERIA/OTHER%20FILES/imagePreview/1_lg0lpn.webp",
                 }
@@ -403,7 +451,7 @@ export const datas = {
             files: [
                 {
                     id: 1,
-                    name: "Planta",
+                    name: "Humanized Layout",
                     link: "https://res.cloudinary.com/djf0isef7/image/upload/v1644964345/public/RENDERS/PROJETO%20ECRT/SALA%20DE%20ESTAR/OTHER%20FILES/Image/1_q3dk4l.webp",
                     image: "https://res.cloudinary.com/djf0isef7/image/upload/v1644964359/public/RENDERS/PROJETO%20ECRT/SALA%20DE%20ESTAR/OTHER%20FILES/imagePreview/1_l5xhmu.webp",
                 }
@@ -442,7 +490,7 @@ export const datas = {
             files: [
                 {
                     id: 1,
-                    name: "Planta",
+                    name: "Humanized Plant",
                     link: "https://res.cloudinary.com/djf0isef7/image/upload/v1644964495/public/RENDERS/PROJETO%20MRN/Child%20Bedroom/OTHER%20FILES/Image/1_yy1pk0.webp",
                     image: "https://res.cloudinary.com/djf0isef7/image/upload/v1644964609/public/RENDERS/PROJETO%20MRN/Child%20Bedroom/OTHER%20FILES/imagePreview/1_fn2peu.webp",
                 }
@@ -489,10 +537,34 @@ export const datas = {
             files: [
                 {
                     id: 1,
-                    name: "Planta",
-                    link: "https://res.cloudinary.com/djf0isef7/image/upload/v1644964978/public/RENDERS/PROJETO%20VNA/TEENAGER%20BEDROOM/OTHER%20FILES/Image/1_jtuafu.webp",
-                    image: "https://res.cloudinary.com/djf0isef7/image/upload/v1644964961/public/RENDERS/PROJETO%20VNA/TEENAGER%20BEDROOM/OTHER%20FILES/imagePreview/1_jhez9m.webp",
-                }
+                    name: "Technical Detailing 01",
+                    link: "https://drive.google.com/file/d/1hRq-T20hmUVejDifl3jaYkjaKznV7O2G/view?usp=sharing",
+                    image: "https://res.cloudinary.com/djf0isef7/image/upload/v1644971336/public/RENDERS/PROJETO%20VNA/TEENAGER%20BEDROOM/OTHER%20FILES/imagePreview/1_elz4q3.webp",
+                },
+                {
+                    id: 2,
+                    name: "Technical Detailing 02",
+                    link: "https://drive.google.com/file/d/11KklBtZXuCu8cu_W_SZOMxUPOoK1ao2-/view?usp=sharing",
+                    image: "https://res.cloudinary.com/djf0isef7/image/upload/v1644971337/public/RENDERS/PROJETO%20VNA/TEENAGER%20BEDROOM/OTHER%20FILES/imagePreview/2_ogvd5w.webp",
+                },
+                {
+                    id: 3,
+                    name: "Technical Detailing 03",
+                    link: "https://drive.google.com/file/d/1KVjXlJ4L2ODjN0DYZ1wwEZm9n50S-tla/view?usp=sharing",
+                    image: "https://res.cloudinary.com/djf0isef7/image/upload/v1644971336/public/RENDERS/PROJETO%20VNA/TEENAGER%20BEDROOM/OTHER%20FILES/imagePreview/3_l9fqmd.webp",
+                },
+                {
+                    id: 4,
+                    name: "Technical Detailing 04",
+                    link: "https://drive.google.com/file/d/1HXDQRJeXsgvy4titBb-2hMK7xIpgVtBw/view?usp=sharing",
+                    image: "https://res.cloudinary.com/djf0isef7/image/upload/v1644971336/public/RENDERS/PROJETO%20VNA/TEENAGER%20BEDROOM/OTHER%20FILES/imagePreview/4_bb6cd8.webp",
+                },
+                {
+                    id: 5,
+                    name: "Humanized Layout",
+                    link: "https://res.cloudinary.com/djf0isef7/image/upload/v1644964978/public/RENDERS/PROJETO%20VNA/TEENAGER%20BEDROOM/OTHER%20FILES/Image/5.webp",
+                    image: "https://res.cloudinary.com/djf0isef7/image/upload/v1644964961/public/RENDERS/PROJETO%20VNA/TEENAGER%20BEDROOM/OTHER%20FILES/imagePreview/5.webp",
+                },
             ],
             images: [
                 {
