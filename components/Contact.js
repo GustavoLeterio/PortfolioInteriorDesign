@@ -107,7 +107,7 @@ const ContactPage = () => {
                         <div className={styles.svg} alt="Facebook"><Link href="https://www.facebook.com/profile.php?id=100009988028985"><a target="_blank"><FacebookLogo /></a></Link></div>
                         <div className={styles.svg} alt="Instagram"><Link href="https://www.instagram.com/julia_costt/" ><a target="_blank"><InstagramLogo /></a></Link></div>
                         <div className={styles.svg} alt="Linked In"><Link href="https://www.linkedin.com/in/julia-soares-costa-37b920192/"><a target="_blank"><LinkedinLogo /></a></Link></div>
-                        <div className={styles.svg} alt="Resume"><Link href=""><a target="_blank"><ResumeLogo /></a></Link></div>
+                        <div className={styles.svg} alt="Resume"><Link href="https://drive.google.com/file/d/181zGurdRyhR3fFBskCoP1GnI_KfPJ-hG/view?usp=sharing"><a target="_blank"><ResumeLogo /></a></Link></div>
                     </div>
                     <div className={styles.socialMediasBoxesActive}>
                         <div className={styles.svgActive} alt="Facebook"><FacebookLogoActive /></div>
