@@ -7,6 +7,8 @@ import { useRouter } from "next/router";
 
 const Navbar = () => {
     const router = useRouter();
+    console.log(router.asPath.toString())
+
     function linkHandler(path, text) {
         return router.asPath.toString() == "#" ? <Link to={path} className={styles.link}>{text}</Link> : <LinkNext href={"/#" + path} ><a className={styles.link}>{text}</a></LinkNext>;
     }
@@ -24,7 +26,7 @@ const Navbar = () => {
             <div className={styles.links}>
                 {linkHandler("about", "About")}
                 {linkHandler("projects", "Projects")}
-                {linkHandler("contact", "Contact")}
+                <LinkNext href={"#contact"} ><a className={styles.link}>Contact</a></LinkNext>
             </div>
         </nav>
     );
